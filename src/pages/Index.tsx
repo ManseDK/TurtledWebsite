@@ -218,7 +218,7 @@ const Index = () => {
               transitionDelay: '0ms'
             }}>
                 <span className="block text-4xl font-bold text-white mb-2 arcade-text">1000+</span>
-                <span className="text-blue-300 clean-text">Active Players</span>
+                <span className="text-blue-300 clean-text">Unique Daily Players</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
