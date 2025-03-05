@@ -37,47 +37,56 @@ const NavBar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo and title */}
-        <Link to="/" className="flex items-center space-x-2 group">
-          <Turtle className="text-turtle-green w-8 h-8 group-hover:animate-swim" />
-          <span className="arcade-text text-lg text-turtle-green">TURTLED</span>
-        </Link>
+        <div className="flex items-center space-x-8">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <Turtle className="text-turtle-green w-8 h-8 group-hover:animate-swim" />
+            <span className="arcade-text text-lg text-turtle-green">TURTLED</span>
+          </Link>
+          
+          {/* Desktop navigation - moved to the left */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link 
+              to="/" 
+              className={`nav-link ${isActive('/') ? 'active' : ''}`}
+            >
+              <span className="flex items-center arcade-text">
+                <Home className="w-4 h-4 mr-1" /> HOME
+              </span>
+            </Link>
+            <Link 
+              to="/guide" 
+              className={`nav-link ${isActive('/guide') ? 'active' : ''}`}
+            >
+              <span className="flex items-center arcade-text">
+                <BookOpen className="w-4 h-4 mr-1" /> GUIDE
+              </span>
+            </Link>
+            <Link 
+              to="/ranks" 
+              className={`nav-link ${isActive('/ranks') ? 'active' : ''}`}
+            >
+              <span className="flex items-center arcade-text">
+                <Trophy className="w-4 h-4 mr-1" /> RANKS
+              </span>
+            </Link>
+          </div>
+        </div>
         
-        {/* Desktop navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          <Link 
-            to="/" 
-            className={`nav-link ${isActive('/') ? 'active' : ''}`}
-          >
-            <span className="flex items-center arcade-text">
-              <Home className="w-4 h-4 mr-1" /> Home
-            </span>
-          </Link>
-          <Link 
-            to="/guide" 
-            className={`nav-link ${isActive('/guide') ? 'active' : ''}`}
-          >
-            <span className="flex items-center arcade-text">
-              <BookOpen className="w-4 h-4 mr-1" /> Guide
-            </span>
-          </Link>
-          <Link 
-            to="/ranks" 
-            className={`nav-link ${isActive('/ranks') ? 'active' : ''}`}
-          >
-            <span className="flex items-center arcade-text">
-              <Trophy className="w-4 h-4 mr-1" /> Ranks
-            </span>
-          </Link>
+        {/* Right side - Discord button and IP */}
+        <div className="hidden md:flex items-center space-x-4">
           <a 
             href="https://discord.gg/turtled" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="nav-link"
+            className="bg-[#9b87f5] hover:bg-[#8a76e4] text-white px-4 py-2 rounded transition-colors"
           >
             <span className="flex items-center arcade-text">
-              <MessageSquare className="w-4 h-4 mr-1" /> Discord
+              <MessageSquare className="w-4 h-4 mr-2" />
             </span>
           </a>
+          <div className="bg-[#F97316] text-white px-4 py-2 rounded arcade-text">
+            PLAY.TURTLED.COM
+          </div>
         </div>
         
         {/* Mobile menu toggle */}
@@ -103,7 +112,7 @@ const NavBar = () => {
               className={`nav-link text-center ${isActive('/') ? 'active' : ''}`}
             >
               <span className="flex items-center justify-center arcade-text">
-                <Home className="w-4 h-4 mr-2" /> Home
+                <Home className="w-4 h-4 mr-2" /> HOME
               </span>
             </Link>
             <Link 
@@ -111,7 +120,7 @@ const NavBar = () => {
               className={`nav-link text-center ${isActive('/guide') ? 'active' : ''}`}
             >
               <span className="flex items-center justify-center arcade-text">
-                <BookOpen className="w-4 h-4 mr-2" /> Guide
+                <BookOpen className="w-4 h-4 mr-2" /> GUIDE
               </span>
             </Link>
             <Link 
@@ -119,19 +128,24 @@ const NavBar = () => {
               className={`nav-link text-center ${isActive('/ranks') ? 'active' : ''}`}
             >
               <span className="flex items-center justify-center arcade-text">
-                <Trophy className="w-4 h-4 mr-2" /> Ranks
+                <Trophy className="w-4 h-4 mr-2" /> RANKS
               </span>
             </Link>
-            <a 
-              href="https://discord.gg/turtled" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="nav-link text-center"
-            >
-              <span className="flex items-center justify-center arcade-text">
-                <MessageSquare className="w-4 h-4 mr-2" /> Discord
-              </span>
-            </a>
+            <div className="flex flex-col space-y-2">
+              <a 
+                href="https://discord.gg/turtled" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-[#9b87f5] hover:bg-[#8a76e4] text-white px-4 py-2 rounded transition-colors"
+              >
+                <span className="flex items-center justify-center arcade-text">
+                  <MessageSquare className="w-4 h-4 mr-2" /> DISCORD
+                </span>
+              </a>
+              <div className="bg-[#F97316] text-white px-4 py-2 rounded arcade-text text-center">
+                PLAY.TURTLED.COM
+              </div>
+            </div>
           </div>
         </div>
       )}
