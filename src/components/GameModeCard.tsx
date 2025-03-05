@@ -26,7 +26,7 @@ const GameModeCard = ({ title, icon, description, details }: GameModeCardProps) 
             </div>
             <div>
               <h3 className="text-xl font-bold text-turtle-blue clean-text">{title}</h3>
-              <p className="text-gray-400 clean-text">{description}</p>
+              <p className="text-blue-300 clean-text">{description}</p>
             </div>
           </div>
           <button
@@ -47,7 +47,7 @@ const GameModeCard = ({ title, icon, description, details }: GameModeCardProps) 
           className="px-6 pb-6"
         >
           <div className="pt-4 border-t border-gray-800">
-            <p className="text-gray-300 leading-relaxed clean-text">{details}</p>
+            <p className="text-blue-200 leading-relaxed clean-text">{details}</p>
           </div>
         </motion.div>
       )}

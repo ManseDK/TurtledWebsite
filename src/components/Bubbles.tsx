@@ -12,8 +12,8 @@ interface BubblesProps {
 
 const Bubbles: React.FC<BubblesProps> = ({
   count = 20,
-  minSize = 10,
-  maxSize = 40,
+  minSize = 15,
+  maxSize = 50,
   minDuration = 10,
   maxDuration = 25,
   containerClass = ""
@@ -71,6 +71,7 @@ const Bubbles: React.FC<BubblesProps> = ({
     <div 
       ref={containerRef} 
       className={`fixed inset-0 overflow-hidden pointer-events-none z-10 ${containerClass}`}
+      style={{ pointerEvents: "none" }}
     />
   );
 };

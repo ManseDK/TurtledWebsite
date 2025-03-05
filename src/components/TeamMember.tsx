@@ -45,7 +45,9 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               </div>
             </div>
           </div>
-          <p className="clean-text text-sm text-turtle-sand flex-grow overflow-y-auto max-h-32 md:max-h-none">{description}</p>
+          <p className="clean-text text-sm text-turtle-sand flex-grow overflow-y-auto pr-1 max-h-48">
+            {description}
+          </p>
         </div>
       ) : (
         <div className="bg-black/80 rounded-xl p-6 shadow-md text-center h-full flex flex-col items-center justify-center">

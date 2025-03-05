@@ -59,10 +59,10 @@ export default {
         },
         // Custom colors for turtle server theme
         turtle: {
-          blue: '#73b9ee',   // New primary color (replacing lime)
-          navy: '#2a5d8c',   // New secondary color (replacing green)
-          sand: '#e6d2a8',    // Sand/beige (keeping this)
-          gold: '#FFC107'     // Gold color for headings
+          blue: '#73b9ee',   // Light blue
+          navy: '#2a5d8c',   // Darker blue
+          sand: '#D3E4FD',   // Light blue color for text
+          gold: '#FFC107'    // Gold color for headings
         }
       },
       borderRadius: {

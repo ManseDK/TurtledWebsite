@@ -7,6 +7,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import VideoBackground from '@/components/VideoBackground';
 import TeamMember from '@/components/TeamMember';
+import Bubbles from '@/components/Bubbles';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -86,6 +87,9 @@ const Index = () => {
       {/* Video Background */}
       <VideoBackground videoId="RnnctM5Rf9I" />
       
+      {/* Bubbles */}
+      <Bubbles count={25} />
+      
       <div className="relative z-10">
         <NavBar />
         
@@ -95,7 +99,7 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}`}>
                 <h1 className="arcade-text text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight">
-                  WELCOME TO <span className="text-turtle-lime">TURTLED</span>
+                  WELCOME TO <span className="text-turtle-blue">TURTLED</span>
                 </h1>
                 <p className="text-lg md:text-xl text-turtle-sand mb-8 clean-text">
                   Join the ultimate Minecraft PVP server with tropical vibes, competitive gamemodes, and an awesome community
@@ -105,7 +109,7 @@ const Index = () => {
                 <div className="flex justify-center mb-8">
                   <button onClick={handleCopyIP} className="flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg py-3 px-6 text-white hover:bg-white/20 transition-colors" aria-label="Copy server IP">
                     <span className="arcade-text text-base">eu.turtled.net</span>
-                    {copied ? <CheckCircle className="w-5 h-5 text-turtle-lime" /> : <Copy className="w-5 h-5" />}
+                    {copied ? <CheckCircle className="w-5 h-5 text-turtle-blue" /> : <Copy className="w-5 h-5" />}
                   </button>
                 </div>
               </div>
@@ -125,7 +129,7 @@ const Index = () => {
         </section>
         
         {/* Features Section */}
-        <section className="py-16 px-4 bg-turtle-green text-white">
+        <section className="py-16 px-4 bg-black text-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="arcade-text text-3xl md:text-4xl mb-4">GAME MODES</h2>
@@ -135,26 +139,26 @@ const Index = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105">
-                <Swords className="w-12 h-12 mb-4 text-turtle-lime" />
+              <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
+                <Swords className="w-12 h-12 mb-4 text-turtle-blue" />
                 <h3 className="text-xl font-bold mb-2 arcade-text">Duels</h3>
-                <p className="text-turtle-sand clean-text">
+                <p className="text-blue-300 clean-text">
                   Face off against opponents in 1v1 combat with various kits and arenas
                 </p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105">
-                <Users className="w-12 h-12 mb-4 text-turtle-lime" />
+              <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
+                <Users className="w-12 h-12 mb-4 text-turtle-blue" />
                 <h3 className="text-xl font-bold mb-2 arcade-text">FFA</h3>
-                <p className="text-turtle-sand clean-text">
+                <p className="text-blue-300 clean-text">
                   Free-for-all mayhem where only the strongest turtle survives
                 </p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105">
-                <Target className="w-12 h-12 mb-4 text-turtle-lime" />
+              <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
+                <Target className="w-12 h-12 mb-4 text-turtle-blue" />
                 <h3 className="text-xl font-bold mb-2 arcade-text">Sandbox</h3>
-                <p className="text-turtle-sand clean-text">
+                <p className="text-blue-300 clean-text">
                   Practice your skills and experiment with custom builds and strategies
                 </p>
               </div>
@@ -163,52 +167,52 @@ const Index = () => {
         </section>
         
         {/* Stats Section */}
-        <section ref={statsRef} className="py-16 px-4 bg-turtle-sand/30">
+        <section ref={statsRef} className="py-16 px-4 bg-black">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-turtle-green mb-4">SERVER STATS</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto clean-text">
+              <h2 className="arcade-text text-3xl text-turtle-blue mb-4">SERVER STATS</h2>
+              <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Join our growing community of tropical warriors
               </p>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className={`bg-white/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '0ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-lime mb-2 arcade-text">1000+</span>
-                <span className="text-turtle-green clean-text">Active Players</span>
+                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">1000+</span>
+                <span className="text-blue-300 clean-text">Active Players</span>
               </div>
               
-              <div className={`bg-white/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '150ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-lime mb-2 arcade-text">50+</span>
-                <span className="text-turtle-green clean-text">Custom Maps</span>
+                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">50+</span>
+                <span className="text-blue-300 clean-text">Custom Maps</span>
               </div>
               
-              <div className={`bg-white/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '300ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-lime mb-2 arcade-text">24/7</span>
-                <span className="text-turtle-green clean-text">Server Uptime</span>
+                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">24/7</span>
+                <span className="text-blue-300 clean-text">Server Uptime</span>
               </div>
               
-              <div className={`bg-white/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '450ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-lime mb-2 arcade-text">10+</span>
-                <span className="text-turtle-green clean-text">Events Monthly</span>
+                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">10+</span>
+                <span className="text-blue-300 clean-text">Events Monthly</span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Meet the Team Section */}
-        <section className="py-16 px-4 bg-turtle-sand/80">
+        <section className="py-16 px-4 bg-[#E8E0CC] rounded-t-3xl">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-turtle-green mb-4">MEET THE TEAM</h2>
+              <h2 className="arcade-text text-3xl text-black mb-4">MEET THE TEAM</h2>
               <p className="text-gray-700 max-w-2xl mx-auto clean-text">
                 Learn about the people who make Turtled amazing!
               </p>
@@ -231,10 +235,10 @@ const Index = () => {
         </section>
         
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-turtle-green/90">
+        <section className="py-16 px-4 bg-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-turtle-lime mb-6">READY TO DIVE IN?</h2>
-            <p className="text-lg text-white mb-8 max-w-2xl mx-auto clean-text">
+            <h2 className="arcade-text text-3xl text-yellow-400 mb-6">READY TO DIVE IN?</h2>
+            <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
