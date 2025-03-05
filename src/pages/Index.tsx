@@ -165,43 +165,43 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Features Section */}
-        <section className="py-16 px-4 bg-gradient-to-b from-black to-black/90">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl md:text-4xl mb-4">GAME MODES</h2>
-              <p className="text-blue-300 max-w-2xl mx-auto clean-text">
-                Choose your battleground and prove your skills across multiple challenging arenas
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
-                <Swords className="w-12 h-12 mb-4 text-turtle-blue" />
-                <h3 className="text-xl font-bold mb-2 arcade-text">Duels</h3>
-                <p className="text-blue-300 clean-text">
-                  Face off against opponents in 1v1 combat with various kits and arenas
-                </p>
-              </div>
-              
-              <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
-                <Users className="w-12 h-12 mb-4 text-turtle-blue" />
-                <h3 className="text-xl font-bold mb-2 arcade-text">FFA</h3>
-                <p className="text-blue-300 clean-text">
-                  Free-for-all mayhem where only the strongest turtle survives
-                </p>
-              </div>
-              
-              <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
-                <Target className="w-12 h-12 mb-4 text-turtle-blue" />
-                <h3 className="text-xl font-bold mb-2 arcade-text">Sandbox</h3>
-                <p className="text-blue-300 clean-text">
-                  Practice your skills and experiment with custom builds and strategies
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+ {/* Features Section */}
+ <section className="py-16 px-4 bg-gradient-to-b from-black to-black/90">
+  <div className="container mx-auto max-w-6xl">
+    <div className="text-center mb-12">
+      <h2 className="arcade-text text-3xl md:text-4xl mb-4">GAME MODES</h2>
+      <p className="text-blue-300 max-w-2xl mx-auto clean-text">
+        Choose your battleground and prove your skills across multiple challenging arenas
+      </p>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
+        <Swords className="w-12 h-12 mb-4 text-turtle-blue" />
+        <h3 className="text-xl font-bold mb-2 arcade-text text-white">Duels</h3>
+        <p className="text-blue-300 clean-text">
+          Face off against opponents in 1v1 combat with various kits and arenas
+        </p>
+      </div>
+      
+      <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
+        <Users className="w-12 h-12 mb-4 text-turtle-blue" />
+        <h3 className="text-xl font-bold mb-2 arcade-text text-white">FFA</h3>
+        <p className="text-blue-300 clean-text">
+          Free-for-all mayhem where only the strongest turtle survives
+        </p>
+      </div>
+      
+      <div className="bg-black/90 backdrop-blur-md rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105 border border-white/10">
+        <Target className="w-12 h-12 mb-4 text-turtle-blue" />
+        <h3 className="text-xl font-bold mb-2 arcade-text text-white">Sandbox</h3>
+        <p className="text-blue-300 clean-text">
+          Practice your skills and experiment with custom builds and strategies
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
         
         {/* Stats Section */}
         <section ref={statsRef} className="py-16 px-4 bg-gradient-to-b from-black to-black/95">
