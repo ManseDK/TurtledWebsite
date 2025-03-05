@@ -11,12 +11,26 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Get the basename from the current URL if on GitHub Pages
+const getBasename = () => {
+  // If we're on GitHub Pages, this will return the repository name (e.g., /your-repo-name)
+  // If we're running locally, this will return an empty string
+  const pathname = window.location.pathname;
+  const repoName = pathname.split('/')[1]; // Get the first segment after the domain
+  
+  // Check if we're in a GitHub Pages environment (has a segment that's not just /)
+  if (repoName && repoName !== '') {
+    return `/${repoName}`;
+  }
+  return '';
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/guide" element={<Guide />} />

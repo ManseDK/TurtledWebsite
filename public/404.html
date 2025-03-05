@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // This script handles SPA routing for GitHub Pages
+    // It redirects all routes back to index.html which then handles routing via React Router
+    
+    // Extract the repo name from the path if on GitHub Pages
+    const pathname = window.location.pathname;
+    const segments = pathname.split('/');
+    let basePath = '';
+    
+    // If there's a segment after the domain (GitHub repo name)
+    if (segments.length > 1 && segments[1] !== '') {
+      basePath = '/' + segments[1];
+    }
+    
+    // Redirect to the index page with the correct base path
+    window.location.href = `${basePath}/index.html${window.location.search}${window.location.hash}`;
+  </script>
+</head>
+<body>
+  <p>Redirecting to the homepage...</p>
+</body>
+</html>
