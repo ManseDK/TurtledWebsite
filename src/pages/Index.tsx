@@ -170,7 +170,7 @@ const Index = () => {
   <div className="container mx-auto max-w-6xl">
     <div className="text-center mb-12">
       <h2 className="arcade-text text-3xl md:text-4xl mb-4">GAME MODES</h2>
-      <p className="text-blue-300 max-w-2xl mx-auto clean-text">
+      <p className="text-white max-w-2xl mx-auto clean-text">
         Choose your battleground and prove your skills across multiple challenging arenas
       </p>
     </div>
