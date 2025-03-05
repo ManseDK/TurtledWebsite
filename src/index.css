@@ -65,6 +65,12 @@
     line-height: 1.4;
   }
 
+  .clean-text {
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 0;
+    line-height: 1.6;
+  }
+
   .pixel-border {
     box-shadow: 
       4px 0 0 0 theme('colors.turtle.lime'),
