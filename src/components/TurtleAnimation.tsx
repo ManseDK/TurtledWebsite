@@ -4,9 +4,14 @@ import { useEffect, useRef } from 'react';
 interface TurtleAnimationProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
+  hidden?: boolean; // New prop to control visibility
 }
 
-const TurtleAnimation = ({ className = "", size = 'md' }: TurtleAnimationProps) => {
+const TurtleAnimation = ({ 
+  className = "", 
+  size = 'md',
+  hidden = false // Default to visible
+}: TurtleAnimationProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   // Map size string to actual pixel values
@@ -28,6 +33,9 @@ const TurtleAnimation = ({ className = "", size = 'md' }: TurtleAnimationProps) 
     element.style.transform = `translate(${randomX}px, ${randomY}px)`;
     element.style.animationDelay = `${randomDelay}s`;
   }, []);
+
+  // If hidden is true, don't render anything
+  if (hidden) return null;
 
   return (
     <div 

@@ -68,19 +68,13 @@ const Index = () => {
             </div>
           </div>
           
-          {/* Decorative Turtles */}
-          <div className="absolute left-5 top-1/4 -translate-y-1/2 opacity-80 hidden md:block">
-            <TurtleAnimation size="sm" />
-          </div>
-          <div className="absolute right-10 bottom-20 opacity-90 hidden md:block">
-            <TurtleAnimation size="md" />
-          </div>
-          <div className="absolute left-[15%] bottom-10 opacity-70 hidden lg:block">
-            <TurtleAnimation size="sm" />
-          </div>
+          {/* Decorative Turtles - all hidden */}
+          <TurtleAnimation size="sm" hidden={true} />
+          <TurtleAnimation size="md" hidden={true} />
+          <TurtleAnimation size="sm" hidden={true} />
           
-          {/* Pixel art box */}
-          <div className="absolute right-[10%] top-[30%] opacity-90 hidden lg:block">
+          {/* Pixel art box - hidden */}
+          <div className="hidden">
             <img 
               src="/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png" 
               alt="Turtle Box" 
