@@ -72,10 +72,11 @@ const NavBar = () => {
             href="https://discord.gg/turtled" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-[#5865F2] hover:bg-[#4752C4] text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2"
+            className="nav-link"
           >
-            <MessageSquare className="w-4 h-4" />
-            <span className="arcade-text text-xs">JOIN DISCORD</span>
+            <span className="flex items-center">
+              <MessageSquare className="w-4 h-4 mr-1" /> Discord
+            </span>
           </a>
         </div>
         
@@ -125,10 +126,11 @@ const NavBar = () => {
               href="https://discord.gg/turtled" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-[#5865F2] hover:bg-[#4752C4] text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center space-x-2"
+              className="nav-link text-center"
             >
-              <MessageSquare className="w-4 h-4" />
-              <span className="arcade-text text-xs">JOIN DISCORD</span>
+              <span className="flex items-center justify-center">
+                <MessageSquare className="w-4 h-4 mr-2" /> Discord
+              </span>
             </a>
           </div>
         </div>
