@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Gamepad2, Swords, Target, Users, Copy, CheckCircle } from 'lucide-react';
@@ -6,45 +5,39 @@ import TurtleAnimation from '@/components/TurtleAnimation';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import VideoBackground from '@/components/VideoBackground';
-
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
   const [isStatsVisible, setIsStatsVisible] = useState(false);
   const [copied, setCopied] = useState(false);
-
   useEffect(() => {
     // Trigger animation after component mounts
     setTimeout(() => {
       setIsLoaded(true);
     }, 100);
-
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         setIsStatsVisible(true);
       }
-    }, { threshold: 0.3 });
-
+    }, {
+      threshold: 0.3
+    });
     if (statsRef.current) {
       observer.observe(statsRef.current);
     }
-
     return () => {
       if (statsRef.current) {
         observer.unobserve(statsRef.current);
       }
     };
   }, []);
-
   const handleCopyIP = () => {
     navigator.clipboard.writeText('eu.turtled.net').then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
   };
-
-  return (
-    <div className="min-h-screen relative overflow-hidden">
+  return <div className="min-h-screen relative overflow-hidden">
       {/* Video Background */}
       <VideoBackground videoId="RnnctM5Rf9I" />
       
@@ -65,17 +58,9 @@ const Index = () => {
                 
                 {/* Server IP Copy Button */}
                 <div className="flex justify-center mb-8">
-                  <button 
-                    onClick={handleCopyIP}
-                    className="flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg py-3 px-6 text-white hover:bg-white/20 transition-colors"
-                    aria-label="Copy server IP"
-                  >
-                    <span className="arcade-text">eu.turtled.net</span>
-                    {copied ? (
-                      <CheckCircle className="w-5 h-5 text-turtle-lime" />
-                    ) : (
-                      <Copy className="w-5 h-5" />
-                    )}
+                  <button onClick={handleCopyIP} className="flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg py-3 px-6 text-white hover:bg-white/20 transition-colors" aria-label="Copy server IP">
+                    <span className="arcade-text text-base">eu.turtled.net</span>
+                    {copied ? <CheckCircle className="w-5 h-5 text-turtle-lime" /> : <Copy className="w-5 h-5" />}
                   </button>
                 </div>
               </div>
@@ -100,11 +85,7 @@ const Index = () => {
           
           {/* Pixel art box - hidden */}
           <div className="hidden">
-            <img 
-              src="/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png" 
-              alt="Turtle Box" 
-              className="w-40 h-40 object-contain turtle-pixel animate-float"
-            />
+            <img src="/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png" alt="Turtle Box" className="w-40 h-40 object-contain turtle-pixel animate-float" />
           </div>
         </section>
         
@@ -147,10 +128,7 @@ const Index = () => {
         </section>
         
         {/* Stats Section */}
-        <section 
-          ref={statsRef}
-          className="py-16 px-4 bg-white/90"
-        >
+        <section ref={statsRef} className="py-16 px-4 bg-white/90">
           <div className="container mx-auto">
             <div className="text-center mb-12">
               <h2 className="arcade-text text-3xl text-turtle-green mb-4">SERVER STATS</h2>
@@ -160,22 +138,30 @@ const Index = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '0ms' }}>
+              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              transitionDelay: '0ms'
+            }}>
                 <span className="block text-4xl font-bold text-turtle-lime mb-2">1000+</span>
                 <span className="text-turtle-green">Active Players</span>
               </div>
               
-              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '150ms' }}>
+              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              transitionDelay: '150ms'
+            }}>
                 <span className="block text-4xl font-bold text-turtle-lime mb-2">50+</span>
                 <span className="text-turtle-green">Custom Maps</span>
               </div>
               
-              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '300ms' }}>
+              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              transitionDelay: '300ms'
+            }}>
                 <span className="block text-4xl font-bold text-turtle-lime mb-2">24/7</span>
                 <span className="text-turtle-green">Server Uptime</span>
               </div>
               
-              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '450ms' }}>
+              <div className={`bg-white rounded-xl p-6 shadow-md text-center transition-all duration-500 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+              transitionDelay: '450ms'
+            }}>
                 <span className="block text-4xl font-bold text-turtle-lime mb-2">10+</span>
                 <span className="text-turtle-green">Events Monthly</span>
               </div>
@@ -191,16 +177,9 @@ const Index = () => {
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button 
-                onClick={handleCopyIP} 
-                className="btn-primary flex items-center justify-center space-x-2"
-              >
+              <button onClick={handleCopyIP} className="btn-primary flex items-center justify-center space-x-2">
                 <span>Join Server Now</span>
-                {copied ? (
-                  <CheckCircle className="w-5 h-5" />
-                ) : (
-                  <Copy className="w-5 h-5" />
-                )}
+                {copied ? <CheckCircle className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
               </button>
               <Link to="/guide" className="btn-secondary">
                 Learn More
@@ -211,8 +190,6 @@ const Index = () => {
         
         <Footer />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
