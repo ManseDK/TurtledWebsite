@@ -62,7 +62,8 @@ export default {
           blue: '#73b9ee',   // Light blue
           navy: '#2a5d8c',   // Darker blue
           sand: '#D3E4FD',   // Light blue color for text
-          gold: '#FFC107'    // Gold color for headings
+          gold: '#FFC107',   // Gold color for headings
+          lime: '#73b9ee'    // Changed from green to blue
         }
       },
       borderRadius: {

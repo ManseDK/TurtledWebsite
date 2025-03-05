@@ -25,7 +25,7 @@ const GameModeCard = ({ title, icon, description, details }: GameModeCardProps) 
               {icon}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-turtle-blue clean-text">{title}</h3>
+              <h3 className="text-xl font-bold text-turtle-blue arcade-text">{title}</h3>
               <p className="text-blue-300 clean-text">{description}</p>
             </div>
           </div>

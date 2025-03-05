@@ -2,8 +2,9 @@
 import RankCard from '@/components/RankCard';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { CheckCircle, HelpCircle } from 'lucide-react';
+import { CheckCircle, HelpCircle, MessageSquare, GitBranch, Headphones, Users } from 'lucide-react';
 import Bubbles from '@/components/Bubbles';
+import { useEffect } from 'react';
 
 const Ranks = () => {
   const bubbleFeatures = [
@@ -23,14 +24,75 @@ const Ranks = () => {
     "Exclusive turtle shell cosmetics",
     "Monthly special rewards"
   ];
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  // Added more team members to have 6 total
+  const teamMembers = [
+    { 
+      name: "CaptainTurtle", 
+      role: "SERVER OWNER",
+      img: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png"
+    },
+    { 
+      name: "CodeShell", 
+      role: "LEAD DEVELOPER",
+      img: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png"
+    },
+    { 
+      name: "BubbleGamer", 
+      role: "COMMUNITY MANAGER",
+      img: "/lovable-uploads/1a88a472-f859-4237-bdac-00adc5406218.png"
+    },
+    { 
+      name: "OceanBreeze", 
+      role: "BUILDER", 
+      img: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png"
+    },
+    { 
+      name: "ShellShock", 
+      role: "MODERATOR",
+      img: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png"
+    },
+    { 
+      name: "TurtleTech", 
+      role: "SYSADMIN",
+      img: "/lovable-uploads/1a88a472-f859-4237-bdac-00adc5406218.png"
+    }
+  ];
+  
+  const socialLinks = [
+    {
+      name: "Discord",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "bg-[#5865F2]"
+    },
+    {
+      name: "Forums",
+      icon: <Users className="w-8 h-8" />,
+      color: "bg-[#FF6B6B]"
+    },
+    {
+      name: "GitHub",
+      icon: <GitBranch className="w-8 h-8" />,
+      color: "bg-[#333333]"
+    },
+    {
+      name: "Support",
+      icon: <Headphones className="w-8 h-8" />,
+      color: "bg-[#00B894]"
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Bubbles count={20} />
+    <div className="min-h-screen bg-black text-white page-transition">
+      <Bubbles count={25} />
       <NavBar />
       
       {/* Header */}
-      <section className="pt-32 pb-16 px-4 relative bg-gradient-to-b from-black to-black">
+      <section className="pt-32 pb-16 px-4 relative bg-gradient-to-b from-black to-black/90">
         <div className="container mx-auto max-w-3xl text-center">
           <h1 className="arcade-text text-4xl md:text-5xl text-turtle-blue mb-6">SERVER RANKS</h1>
           <p className="text-lg text-blue-300 max-w-2xl mx-auto clean-text">
@@ -40,8 +102,9 @@ const Ranks = () => {
       </section>
       
       {/* Ranks Section */}
-      <section className="py-12 px-4 bg-black">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-12 px-4 bg-black bg-opacity-90 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/70 pointer-events-none"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <RankCard
               title="BUBBLE RANK"
@@ -63,8 +126,9 @@ const Ranks = () => {
       </section>
       
       {/* Benefits Section */}
-      <section className="py-12 px-4 bg-black text-white">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-12 px-4 bg-black bg-opacity-90 text-white relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/80 pointer-events-none"></div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="arcade-text text-3xl mb-4 text-turtle-blue">RANK BENEFITS</h2>
             <p className="text-blue-300 max-w-2xl mx-auto clean-text">
@@ -107,8 +171,9 @@ const Ranks = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="py-12 px-4 bg-black">
-        <div className="container mx-auto max-w-4xl">
+      <section className="py-12 px-4 bg-black bg-opacity-90 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/80 pointer-events-none"></div>
+        <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="arcade-text text-3xl text-turtle-blue mb-4">FREQUENTLY ASKED QUESTIONS</h2>
             <p className="text-blue-300 max-w-2xl mx-auto clean-text">
@@ -165,6 +230,52 @@ const Ranks = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Let's Be Social Section */}
+      <section className="py-16 px-4 bg-black relative rounded-t-3xl mt-12">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent"></div>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="md:w-1/2">
+              <img 
+                src="/lovable-uploads/d16d93fc-5c37-43d1-abc3-505c6ec3e471.png" 
+                alt="Discord mascot" 
+                className="w-full max-w-md turtle-pixel mx-auto" 
+              />
+            </div>
+            <div className="md:w-1/2 text-left">
+              <h2 className="arcade-text text-3xl text-turtle-blue mb-4">Let's Be Social!</h2>
+              <p className="text-blue-300 clean-text mb-6">
+                Here on Turtled we think communication is the key to an amazing community. Because of that, we heavily value our Discord and the way it allows us to connect with our favourite people ever - you! Come join us, and let's create our server - together!
+              </p>
+              
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                {socialLinks.map((link, index) => (
+                  <a 
+                    key={index}
+                    href="#" 
+                    className={`${link.color} hover:opacity-90 p-4 rounded-lg flex items-center justify-center transition-transform hover:scale-105`}
+                  >
+                    <div className="flex flex-col items-center">
+                      {link.icon}
+                      <span className="mt-2 font-bold clean-text text-white">{link.name}</span>
+                    </div>
+                  </a>
+                ))}
+              </div>
+              
+              <a 
+                href="https://discord.gg/turtled" 
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="inline-block bg-[#5865F2] hover:bg-[#4752c4] text-white py-3 px-10 rounded-lg font-bold transition-all duration-300 clean-text"
+              >
+                JOIN OUR DISCORD
+              </a>
             </div>
           </div>
         </div>

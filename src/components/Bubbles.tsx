@@ -12,8 +12,8 @@ interface BubblesProps {
 
 const Bubbles: React.FC<BubblesProps> = ({
   count = 20,
-  minSize = 15,
-  maxSize = 50,
+  minSize = 20,
+  maxSize = 60,
   minDuration = 10,
   maxDuration = 25,
   containerClass = ""
@@ -49,7 +49,7 @@ const Bubbles: React.FC<BubblesProps> = ({
     bubble.style.height = `${size}px`;
     
     // Random horizontal position
-    const containerWidth = container.offsetWidth;
+    const containerWidth = window.innerWidth;
     const left = Math.random() * containerWidth;
     bubble.style.left = `${left}px`;
     
@@ -70,7 +70,7 @@ const Bubbles: React.FC<BubblesProps> = ({
   return (
     <div 
       ref={containerRef} 
-      className={`fixed inset-0 overflow-hidden pointer-events-none z-10 ${containerClass}`}
+      className={`fixed inset-0 overflow-hidden pointer-events-none z-50 ${containerClass}`}
       style={{ pointerEvents: "none" }}
     />
   );

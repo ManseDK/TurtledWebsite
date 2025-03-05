@@ -37,9 +37,11 @@ const NavBar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo and title */}
-        <Link to="/" className="flex items-center space-x-2 group">
-          <Turtle className="text-turtle-lime w-8 h-8 group-hover:animate-swim" />
-          <span className="arcade-text text-lg text-turtle-lime">TURTLED</span>
+        <Link to="/" className="flex items-center space-x-2 group relative">
+          <div className="relative w-8 h-8 flex items-center justify-center overflow-visible">
+            <Turtle className="text-turtle-blue w-8 h-8 absolute group-hover:animate-swim" />
+          </div>
+          <span className="arcade-text text-lg text-turtle-blue">TURTLED</span>
         </Link>
         
         {/* Navigation Links - Center Aligned */}
@@ -98,7 +100,7 @@ const NavBar = () => {
         {/* Mobile menu toggle */}
         <button 
           onClick={toggleMenu} 
-          className="md:hidden text-white hover:text-turtle-lime transition-colors"
+          className="md:hidden text-white hover:text-turtle-blue transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (

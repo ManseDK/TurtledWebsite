@@ -27,7 +27,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       onMouseLeave={() => setIsActive(false)}
     >
       {isActive ? (
-        <div className="bg-black/90 rounded-xl p-6 shadow-md h-full flex flex-col">
+        <div className="bg-black/90 rounded-xl p-6 shadow-md h-full flex flex-col overflow-hidden">
           <div className="flex items-start mb-4">
             <div className="mr-4 flex-shrink-0">
               <div className="w-16 h-16 relative overflow-hidden rounded-md">
