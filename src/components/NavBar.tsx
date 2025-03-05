@@ -39,9 +39,9 @@ const NavBar = () => {
         {/* Logo and title */}
         <Link to="/" className="flex items-center space-x-2 group relative">
           <div className="relative w-8 h-8 flex items-center justify-center overflow-visible">
-            <Turtle className="text-turtle-blue w-8 h-8 absolute group-hover:animate-swim" />
+            <Turtle className="text-turtle-blue w-8 h-8 absolute" />
           </div>
-          <span className="arcade-text text-lg text-turtle-blue">TURTLED</span>
+          <span className="arcade-text text-lg text-turtle-blue animate-pulse-glow">TURTLED</span>
         </Link>
         
         {/* Navigation Links - Center Aligned */}
@@ -50,7 +50,7 @@ const NavBar = () => {
             to="/" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/') 
-                ? 'bg-[#3b82f6] text-white' 
+                ? 'bg-[#3b82f6] text-white shadow-glow' 
                 : 'text-white hover:bg-[#3b82f6]/80'
             }`}
           >
@@ -61,7 +61,7 @@ const NavBar = () => {
             to="/guide" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/guide') 
-                ? 'bg-[#3b82f6] text-white' 
+                ? 'bg-[#3b82f6] text-white shadow-glow' 
                 : 'text-white hover:bg-[#3b82f6]/80'
             }`}
           >
@@ -72,7 +72,7 @@ const NavBar = () => {
             to="/ranks" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/ranks') 
-                ? 'bg-[#3b82f6] text-white' 
+                ? 'bg-[#3b82f6] text-white shadow-glow' 
                 : 'text-white hover:bg-[#3b82f6]/80'
             }`}
           >
@@ -92,7 +92,7 @@ const NavBar = () => {
             <MessageSquare className="w-6 h-6" />
           </a>
           
-          <div className="bg-[#F5A524] text-black clean-text font-bold px-4 py-2 rounded-md flex items-center">
+          <div className="bg-[#F5A524] text-black clean-text font-bold px-4 py-2 rounded-md flex items-center shadow-glow">
             PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
           </div>
         </div>
@@ -118,7 +118,7 @@ const NavBar = () => {
             <Link 
               to="/" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/') ? 'bg-[#3b82f6] text-white' : 'text-white'
+                isActive('/') ? 'bg-[#3b82f6] text-white shadow-glow' : 'text-white'
               }`}
             >
               HOME
@@ -127,7 +127,7 @@ const NavBar = () => {
             <Link 
               to="/guide" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/guide') ? 'bg-[#3b82f6] text-white' : 'text-white'
+                isActive('/guide') ? 'bg-[#3b82f6] text-white shadow-glow' : 'text-white'
               }`}
             >
               GUIDE
@@ -136,7 +136,7 @@ const NavBar = () => {
             <Link 
               to="/ranks" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/ranks') ? 'bg-[#3b82f6] text-white' : 'text-white'
+                isActive('/ranks') ? 'bg-[#3b82f6] text-white shadow-glow' : 'text-white'
               }`}
             >
               RANKS
@@ -154,7 +154,7 @@ const NavBar = () => {
                 </span>
               </a>
               
-              <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md clean-text font-bold text-center">
+              <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md clean-text font-bold text-center shadow-glow">
                 PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
               </div>
             </div>

@@ -45,7 +45,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               </div>
             </div>
           </div>
-          <p className="clean-text text-sm text-turtle-sand flex-grow overflow-y-auto pr-1 max-h-48">
+          <p className="clean-text text-sm text-turtle-sand flex-grow overflow-y-auto pr-1 max-h-40 custom-scrollbar">
             {description}
           </p>
         </div>

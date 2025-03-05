@@ -48,10 +48,13 @@ const Bubbles: React.FC<BubblesProps> = ({
     bubble.style.width = `${size}px`;
     bubble.style.height = `${size}px`;
     
-    // Random horizontal position
+    // Random horizontal position across full width
     const containerWidth = window.innerWidth;
     const left = Math.random() * containerWidth;
     bubble.style.left = `${left}px`;
+    
+    // Start from bottom
+    bubble.style.bottom = '-20px';
     
     // Random animation duration
     const duration = Math.random() * (maxDuration - minDuration) + minDuration;

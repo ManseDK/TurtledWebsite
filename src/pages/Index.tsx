@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Swords, Target, Users, Copy, CheckCircle } from 'lucide-react';
+import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, Discord } from 'lucide-react';
 import TurtleAnimation from '@/components/TurtleAnimation';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -14,7 +14,6 @@ const Index = () => {
   const statsRef = useRef<HTMLDivElement>(null);
   const [isStatsVisible, setIsStatsVisible] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [activeTeamMember, setActiveTeamMember] = useState(0);
   
   const teamMembers = [
     {
@@ -48,6 +47,22 @@ const Index = () => {
       image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
       avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
       color: "bg-green-600"
+    },
+    {
+      name: "WaveRider",
+      role: "EVENT COORDINATOR",
+      description: "I plan and execute all of our special events and tournaments! From seasonal competitions to weekly challenges, I make sure there's always something exciting happening on the server. Join us for awesome prizes and glory!",
+      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+      avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
+      color: "bg-yellow-500"
+    },
+    {
+      name: "ReefKeeper",
+      role: "SUPPORT SPECIALIST",
+      description: "Need help with anything on the server? I'm your turtle! I handle player support tickets, resolve disputes, and make sure everyone follows the rules. I'm dedicated to making your experience on Turtled as smooth as possible!",
+      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+      avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
+      color: "bg-indigo-500"
     }
   ];
 
@@ -83,7 +98,7 @@ const Index = () => {
     });
   };
 
-  return <div className="min-h-screen relative overflow-hidden">
+  return <div className="min-h-screen relative overflow-hidden page-transition">
       {/* Video Background */}
       <VideoBackground videoId="RnnctM5Rf9I" />
       
@@ -99,7 +114,7 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}`}>
                 <h1 className="arcade-text text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight">
-                  WELCOME TO <span className="text-turtle-blue">TURTLED</span>
+                  WELCOME TO <span className="text-turtle-blue animate-pulse-glow">TURTLED</span>
                 </h1>
                 <p className="text-lg md:text-xl text-turtle-sand mb-8 clean-text">
                   Join the ultimate Minecraft PVP server with tropical vibes, competitive gamemodes, and an awesome community
@@ -129,11 +144,11 @@ const Index = () => {
         </section>
         
         {/* Features Section */}
-        <section className="py-16 px-4 bg-black text-white">
+        <section className="py-16 px-4 bg-gradient-to-b from-black/90 to-black text-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="arcade-text text-3xl md:text-4xl mb-4">GAME MODES</h2>
-              <p className="text-turtle-sand max-w-2xl mx-auto clean-text">
+              <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Choose your battleground and prove your skills across multiple challenging arenas
               </p>
             </div>
@@ -167,10 +182,10 @@ const Index = () => {
         </section>
         
         {/* Stats Section */}
-        <section ref={statsRef} className="py-16 px-4 bg-black">
+        <section ref={statsRef} className="py-16 px-4 bg-gradient-to-b from-black to-black/95">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-turtle-blue mb-4">SERVER STATS</h2>
+              <h2 className="arcade-text text-3xl text-turtle-blue mb-4 animate-pulse-glow">SERVER STATS</h2>
               <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Join our growing community of tropical warriors
               </p>
@@ -209,7 +224,7 @@ const Index = () => {
         </section>
 
         {/* Meet the Team Section */}
-        <section className="py-16 px-4 bg-[#E8E0CC] rounded-t-3xl">
+        <section className="py-16 px-4 bg-[#E8E0CC] rounded-t-3xl relative">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="arcade-text text-3xl text-black mb-4">MEET THE TEAM</h2>
@@ -218,7 +233,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {teamMembers.map((member, index) => (
                 <TeamMember
                   key={index}
@@ -234,10 +249,41 @@ const Index = () => {
           </div>
         </section>
         
+        {/* Let's Be Social Section */}
+        <section className="py-16 px-4 bg-gradient-to-b from-black/90 to-black">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="arcade-text text-3xl text-turtle-blue mb-6 animate-pulse-glow">LET'S BE SOCIAL</h2>
+            <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
+              Follow us on social media to stay updated with the latest news and events!
+            </p>
+            
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
+              <a href="#" className="social-icon-link bg-blue-600 hover:bg-blue-700 transition-all p-4 rounded-lg flex items-center justify-center group">
+                <Facebook className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="social-icon-link bg-blue-400 hover:bg-blue-500 transition-all p-4 rounded-lg flex items-center justify-center group">
+                <Twitter className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="social-icon-link bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all p-4 rounded-lg flex items-center justify-center group">
+                <Instagram className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="social-icon-link bg-red-600 hover:bg-red-700 transition-all p-4 rounded-lg flex items-center justify-center group">
+                <Youtube className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="social-icon-link bg-purple-700 hover:bg-purple-800 transition-all p-4 rounded-lg flex items-center justify-center group">
+                <Twitch className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#" className="social-icon-link bg-[#5865F2] hover:bg-[#4752c4] transition-all p-4 rounded-lg flex items-center justify-center group">
+                <Discord className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </section>
+        
         {/* CTA Section */}
         <section className="py-16 px-4 bg-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-yellow-400 mb-6">READY TO DIVE IN?</h2>
+            <h2 className="arcade-text text-3xl text-yellow-400 mb-6 animate-pulse-glow">READY TO DIVE IN?</h2>
             <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>
