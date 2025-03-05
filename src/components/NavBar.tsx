@@ -61,7 +61,7 @@ const NavBar = () => {
             to="/guide" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/guide') 
-                ? 'bg-[#3b82f6] text-white shadow-glow' 
+                ? 'bg-[#3b82f6] text-white shadow-glow-white' 
                 : 'text-white hover:bg-[#3b82f6]/80'
             }`}
           >
@@ -72,7 +72,7 @@ const NavBar = () => {
             to="/ranks" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/ranks') 
-                ? 'bg-[#3b82f6] text-white shadow-glow' 
+                ? 'bg-[#3b82f6] text-white shadow-glow-white' 
                 : 'text-white hover:bg-[#3b82f6]/80'
             }`}
           >
@@ -127,7 +127,7 @@ const NavBar = () => {
             <Link 
               to="/guide" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/guide') ? 'bg-[#3b82f6] text-white shadow-glow' : 'text-white'
+                isActive('/guide') ? 'bg-[#3b82f6] text-white shadow-glow-white' : 'text-white'
               }`}
             >
               GUIDE
@@ -136,7 +136,7 @@ const NavBar = () => {
             <Link 
               to="/ranks" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/ranks') ? 'bg-[#3b82f6] text-white shadow-glow' : 'text-white'
+                isActive('/ranks') ? 'bg-[#3b82f6] text-white shadow-glow-white' : 'text-white'
               }`}
             >
               RANKS

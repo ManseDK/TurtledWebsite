@@ -29,8 +29,32 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       <div className="h-full">
         <div className={`transition-all duration-500 ease-in-out h-full transform ${isActive ? 'scale-105' : ''}`}>
           <div className="bg-black/90 rounded-xl p-6 shadow-md h-full flex flex-col overflow-hidden">
-            {isActive ? (
-              <div className="transition-opacity duration-500 ease-in-out opacity-100 h-full flex flex-col">
+            <div className="relative h-full flex flex-col">
+              {/* Default view (avatar) */}
+              <div 
+                className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-opacity duration-300 ease-in-out ${
+                  isActive ? 'opacity-0' : 'opacity-100'
+                }`}
+              >
+                <div className="w-14 h-14 mb-3">
+                  <img 
+                    src={avatarImage} 
+                    alt={`${name} avatar`} 
+                    className="turtle-pixel w-full h-full object-contain"
+                  />
+                </div>
+                <h3 className="arcade-text text-base text-turtle-blue mb-1">{name}</h3>
+                <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
+                  {role}
+                </div>
+              </div>
+              
+              {/* Expanded view (details) */}
+              <div 
+                className={`relative h-full transition-opacity duration-300 ease-in-out ${
+                  isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+              >
                 <div className="flex items-start mb-4">
                   <div className="mr-4 flex-shrink-0">
                     <div className="w-16 h-16 relative overflow-hidden rounded-md">
@@ -52,21 +76,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
                   {description}
                 </p>
               </div>
-            ) : (
-              <div className="transition-opacity duration-500 ease-in-out opacity-100 h-full flex flex-col items-center justify-center text-center">
-                <div className="w-14 h-14 mb-3">
-                  <img 
-                    src={avatarImage} 
-                    alt={`${name} avatar`} 
-                    className="turtle-pixel w-full h-full object-contain"
-                  />
-                </div>
-                <h3 className="arcade-text text-base text-turtle-blue mb-1">{name}</h3>
-                <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
-                  {role}
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </div>

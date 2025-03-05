@@ -53,9 +53,6 @@ const Bubbles: React.FC<BubblesProps> = ({
     const left = Math.random() * containerWidth;
     bubble.style.left = `${left}px`;
     
-    // Start from bottom
-    bubble.style.bottom = '-20px';
-    
     // Random animation duration
     const duration = Math.random() * (maxDuration - minDuration) + minDuration;
     bubble.style.animationDuration = `${duration}s`;
@@ -73,7 +70,8 @@ const Bubbles: React.FC<BubblesProps> = ({
   return (
     <div 
       ref={containerRef} 
-      className={`fixed bottom-0 left-0 w-full h-full overflow-hidden pointer-events-none z-50 ${containerClass}`}
+      className={`fixed inset-0 w-full h-full overflow-hidden pointer-events-none z-0 ${containerClass}`}
+      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
     />
   );
 };

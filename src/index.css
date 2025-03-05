@@ -46,7 +46,7 @@
   }
 
   * {
-    @apply border-border;
+    @apply border-transparent;
   }
 
   body {
@@ -82,7 +82,7 @@
   }
 
   .glass {
-    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl;
+    @apply bg-white/10 backdrop-blur-lg border-0 rounded-xl;
   }
 
   .turtle-pixel {
