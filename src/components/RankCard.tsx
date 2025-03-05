@@ -28,7 +28,7 @@ const RankCard = ({ title, icon, price, features, isPremium = false }: RankCardP
           <img 
             src={icon} 
             alt={title} 
-            className="w-24 h-24 mb-4 turtle-pixel object-contain animate-pulse-glow" 
+            className="w-24 h-24 mb-4 turtle-pixel object-contain" 
           />
           <h3 className={`text-2xl font-bold mb-2 arcade-text ${isPremium ? 'text-white' : 'text-turtle-blue'}`}>{title}</h3>
           <div className={`text-3xl font-bold mb-2 text-white`}>{price}</div>

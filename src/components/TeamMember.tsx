@@ -18,65 +18,47 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   avatarImage,
   color = "bg-turtle-blue" 
 }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   
   return (
-    <div 
-      className="h-full"
-      onMouseEnter={() => setIsActive(true)}
-      onMouseLeave={() => setIsActive(false)}
-    >
-      <div className="h-full">
-        <div className={`transition-all duration-300 ease-in-out h-full ${isActive ? 'scale-105' : ''}`}>
-          <div className="bg-black/90 rounded-xl p-6 shadow-md h-full flex flex-col overflow-hidden border-0">
-            <div className="relative h-full flex flex-col">
-              {/* Default view (avatar) */}
-              <div 
-                className={`absolute inset-0 flex flex-col items-center justify-center text-center transition-opacity duration-300 ease-in-out ${
-                  isActive ? 'opacity-0' : 'opacity-100'
-                }`}
-              >
-                <div className="w-14 h-14 mb-3">
-                  <img 
-                    src={avatarImage} 
-                    alt={`${name} avatar`} 
-                    className="turtle-pixel w-full h-full object-contain"
-                  />
-                </div>
-                <h3 className="arcade-text text-base text-turtle-blue mb-1">{name}</h3>
-                <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
-                  {role}
-                </div>
-              </div>
-              
-              {/* Expanded view (details) */}
-              <div 
-                className={`absolute inset-0 h-full flex flex-col transition-opacity duration-300 ease-in-out ${
-                  isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                }`}
-              >
-                <div className="flex items-start mb-4">
-                  <div className="mr-4 flex-shrink-0">
-                    <div className="w-16 h-16 relative overflow-hidden rounded-md">
-                      <img 
-                        src={image} 
-                        alt={`${name} character`} 
-                        className="turtle-pixel w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="arcade-text text-lg mb-1 text-turtle-blue">{name}</h3>
-                    <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
-                      {role}
-                    </div>
-                  </div>
-                </div>
-                <p className="clean-text text-sm text-turtle-sand flex-grow overflow-y-auto pr-1 max-h-40 custom-scrollbar">
-                  {description}
-                </p>
+    <div className="h-full">
+      <div 
+        className="bg-black/90 rounded-xl p-6 shadow-md h-full transition-all duration-300 hover:scale-105 border-0"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="flex flex-col h-full">
+          {/* Header with avatar and name */}
+          <div className="flex items-center mb-4">
+            <div className="w-16 h-16 relative overflow-hidden rounded-md mr-4">
+              <img 
+                src={image} 
+                alt={`${name} character`} 
+                className="turtle-pixel w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="arcade-text text-lg mb-1 text-turtle-blue">{name}</h3>
+              <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
+                {role}
               </div>
             </div>
+          </div>
+          
+          {/* Description - collapsible on mobile, always visible on desktop */}
+          <div className={`clean-text text-sm text-turtle-sand overflow-y-auto pr-1 custom-scrollbar 
+            ${isExpanded ? 'max-h-40' : 'max-h-0 md:max-h-40'} 
+            transition-all duration-300 ease-in-out`}>
+            {description}
+          </div>
+          
+          {/* Mobile expand button */}
+          <div className="mt-2 text-center md:hidden">
+            <button 
+              className="text-xs text-turtle-blue clean-text"
+              aria-label={isExpanded ? "Show less" : "Show more"}
+            >
+              {isExpanded ? "↑ Show less" : "↓ Show more"}
+            </button>
           </div>
         </div>
       </div>
