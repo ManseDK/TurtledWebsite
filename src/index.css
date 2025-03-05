@@ -49,8 +49,8 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Quicksand', sans-serif;
+    @apply bg-background text-foreground antialiased arcade-text;
+    letter-spacing: -0.05em;
   }
 
   h1, h2, h3, h4, h5, h6 {

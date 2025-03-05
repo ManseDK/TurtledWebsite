@@ -48,7 +48,7 @@ const NavBar = () => {
             to="/" 
             className={`nav-link ${isActive('/') ? 'active' : ''}`}
           >
-            <span className="flex items-center">
+            <span className="flex items-center arcade-text">
               <Home className="w-4 h-4 mr-1" /> Home
             </span>
           </Link>
@@ -56,7 +56,7 @@ const NavBar = () => {
             to="/guide" 
             className={`nav-link ${isActive('/guide') ? 'active' : ''}`}
           >
-            <span className="flex items-center">
+            <span className="flex items-center arcade-text">
               <BookOpen className="w-4 h-4 mr-1" /> Guide
             </span>
           </Link>
@@ -64,7 +64,7 @@ const NavBar = () => {
             to="/ranks" 
             className={`nav-link ${isActive('/ranks') ? 'active' : ''}`}
           >
-            <span className="flex items-center">
+            <span className="flex items-center arcade-text">
               <Trophy className="w-4 h-4 mr-1" /> Ranks
             </span>
           </Link>
@@ -74,7 +74,7 @@ const NavBar = () => {
             rel="noopener noreferrer" 
             className="nav-link"
           >
-            <span className="flex items-center">
+            <span className="flex items-center arcade-text">
               <MessageSquare className="w-4 h-4 mr-1" /> Discord
             </span>
           </a>
@@ -102,7 +102,7 @@ const NavBar = () => {
               to="/" 
               className={`nav-link text-center ${isActive('/') ? 'active' : ''}`}
             >
-              <span className="flex items-center justify-center">
+              <span className="flex items-center justify-center arcade-text">
                 <Home className="w-4 h-4 mr-2" /> Home
               </span>
             </Link>
@@ -110,7 +110,7 @@ const NavBar = () => {
               to="/guide" 
               className={`nav-link text-center ${isActive('/guide') ? 'active' : ''}`}
             >
-              <span className="flex items-center justify-center">
+              <span className="flex items-center justify-center arcade-text">
                 <BookOpen className="w-4 h-4 mr-2" /> Guide
               </span>
             </Link>
@@ -118,7 +118,7 @@ const NavBar = () => {
               to="/ranks" 
               className={`nav-link text-center ${isActive('/ranks') ? 'active' : ''}`}
             >
-              <span className="flex items-center justify-center">
+              <span className="flex items-center justify-center arcade-text">
                 <Trophy className="w-4 h-4 mr-2" /> Ranks
               </span>
             </Link>
@@ -128,7 +128,7 @@ const NavBar = () => {
               rel="noopener noreferrer" 
               className="nav-link text-center"
             >
-              <span className="flex items-center justify-center">
+              <span className="flex items-center justify-center arcade-text">
                 <MessageSquare className="w-4 h-4 mr-2" /> Discord
               </span>
             </a>
