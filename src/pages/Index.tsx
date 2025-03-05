@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, Discord } from 'lucide-react';
+import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, MessageSquare } from 'lucide-react';
 import TurtleAnimation from '@/components/TurtleAnimation';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -274,7 +274,7 @@ const Index = () => {
                 <Twitch className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
               </a>
               <a href="#" className="social-icon-link bg-[#5865F2] hover:bg-[#4752c4] transition-all p-4 rounded-lg flex items-center justify-center group">
-                <Discord className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
+                <MessageSquare className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
