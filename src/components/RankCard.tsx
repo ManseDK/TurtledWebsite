@@ -12,9 +12,9 @@ interface RankCardProps {
 const RankCard = ({ title, icon, price, features, isPremium = false }: RankCardProps) => {
   return (
     <div 
-      className={`relative rounded-xl overflow-hidden transition-all duration-500 transform hover:scale-105 ${
+      className={`relative rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 ${
         isPremium 
-          ? 'bg-gradient-to-br from-blue-400 to-blue-600 shadow-xl shadow-blue-500/30' 
+          ? 'bg-gradient-to-br from-blue-400 to-blue-600 shadow-xl' 
           : 'bg-gradient-to-br from-gray-900 to-gray-800 shadow-md'
       }`}
     >
@@ -31,7 +31,7 @@ const RankCard = ({ title, icon, price, features, isPremium = false }: RankCardP
             className="w-24 h-24 mb-4 turtle-pixel object-contain animate-pulse-glow" 
           />
           <h3 className={`text-2xl font-bold mb-2 arcade-text ${isPremium ? 'text-white' : 'text-turtle-blue'}`}>{title}</h3>
-          <div className={`text-3xl font-bold mb-2 ${isPremium ? 'text-white' : 'text-white'}`}>{price}</div>
+          <div className={`text-3xl font-bold mb-2 text-white`}>{price}</div>
         </div>
         
         <div className={`space-y-3 mb-6 ${isPremium ? 'text-white' : 'text-gray-300'}`}>

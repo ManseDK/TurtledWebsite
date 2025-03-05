@@ -1,7 +1,7 @@
-
 import RankCard from '@/components/RankCard';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import PageHeader from '@/components/PageHeader';
 import { CheckCircle, HelpCircle, MessageSquare, Instagram, Twitter, Youtube } from 'lucide-react';
 import Bubbles from '@/components/Bubbles';
 import { useEffect } from 'react';
@@ -29,7 +29,6 @@ const Ranks = () => {
     window.scrollTo(0, 0);
   }, []);
   
-  // Added more team members to have 6 total
   const teamMembers = [
     { 
       name: "CaptainTurtle", 
@@ -91,15 +90,11 @@ const Ranks = () => {
       <Bubbles count={25} />
       <NavBar />
       
-      {/* Header */}
-      <section className="pt-32 pb-16 px-4 relative bg-gradient-to-b from-black to-black/90">
-        <div className="container mx-auto max-w-3xl text-center">
-          <h1 className="arcade-text text-4xl md:text-5xl text-white mb-6 shadow-glow-white">SERVER RANKS</h1>
-          <p className="text-lg text-blue-300 max-w-2xl mx-auto clean-text">
-            Support the server and get awesome perks with our premium ranks
-          </p>
-        </div>
-      </section>
+      <PageHeader 
+        title="SERVER RANKS" 
+        description="Support the server and get awesome perks with our premium ranks"
+        glowColor="white"
+      />
       
       {/* Ranks Section */}
       <section className="py-12 px-4 bg-black bg-opacity-90 relative">
@@ -137,7 +132,7 @@ const Ranks = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:scale-105">
               <div className="w-16 h-16 bg-turtle-blue/30 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-8 h-8 text-turtle-blue" />
               </div>
@@ -147,7 +142,7 @@ const Ranks = () => {
               </p>
             </div>
             
-            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:scale-105">
               <div className="w-16 h-16 bg-turtle-blue/30 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-8 h-8 text-turtle-blue" />
               </div>
@@ -157,7 +152,7 @@ const Ranks = () => {
               </p>
             </div>
             
-            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:transform hover:scale-105">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6 flex flex-col items-center text-center transition-transform hover:scale-105">
               <div className="w-16 h-16 bg-turtle-blue/30 rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-8 h-8 text-turtle-blue" />
               </div>

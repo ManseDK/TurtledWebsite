@@ -27,7 +27,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       onMouseLeave={() => setIsActive(false)}
     >
       <div className="h-full">
-        <div className={`transition-all duration-300 ease-in-out h-full transform ${isActive ? 'scale-105' : ''}`}>
+        <div className={`transition-all duration-300 ease-in-out h-full ${isActive ? 'scale-105' : ''}`}>
           <div className="bg-black/90 rounded-xl p-6 shadow-md h-full flex flex-col overflow-hidden border-0">
             <div className="relative h-full flex flex-col">
               {/* Default view (avatar) */}
@@ -51,7 +51,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               
               {/* Expanded view (details) */}
               <div 
-                className={`absolute inset-0 h-full transition-opacity duration-300 ease-in-out ${
+                className={`absolute inset-0 h-full flex flex-col transition-opacity duration-300 ease-in-out ${
                   isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'
                 }`}
               >
