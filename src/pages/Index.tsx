@@ -1,7 +1,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, MessageSquare } from 'lucide-react';
+import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, MessageSquare, GitBranch, Headphones } from 'lucide-react';
 import TurtleAnimation from '@/components/TurtleAnimation';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
