@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Turtle, Home, BookOpen, Trophy, Menu, X } from 'lucide-react';
+import { Turtle, Home, BookOpen, Trophy, Menu, X, MessageSquare } from 'lucide-react';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ const NavBar = () => {
         </Link>
         
         {/* Desktop navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           <Link 
             to="/" 
             className={`nav-link ${isActive('/') ? 'active' : ''}`}
@@ -67,6 +68,15 @@ const NavBar = () => {
               <Trophy className="w-4 h-4 mr-1" /> Ranks
             </span>
           </Link>
+          <a 
+            href="https://discord.gg/turtled" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-[#5865F2] hover:bg-[#4752C4] text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span className="arcade-text text-xs">JOIN DISCORD</span>
+          </a>
         </div>
         
         {/* Mobile menu toggle */}
@@ -111,6 +121,15 @@ const NavBar = () => {
                 <Trophy className="w-4 h-4 mr-2" /> Ranks
               </span>
             </Link>
+            <a 
+              href="https://discord.gg/turtled" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bg-[#5865F2] hover:bg-[#4752C4] text-white px-4 py-2 rounded-lg transition-colors flex items-center justify-center space-x-2"
+            >
+              <MessageSquare className="w-4 h-4" />
+              <span className="arcade-text text-xs">JOIN DISCORD</span>
+            </a>
           </div>
         </div>
       )}
