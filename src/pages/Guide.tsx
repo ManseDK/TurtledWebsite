@@ -26,7 +26,7 @@ const Guide = () => {
         <div className="container mx-auto max-w-4xl">
           <div className="mb-12">
             <div className="inline-block bg-turtle-lime/20 px-3 py-1 rounded-full mb-2">
-              <span className="text-sm font-semibold text-turtle-lime arcade-text">Game Modes</span>
+              <span className="text-sm font-semibold text-turtle-lime clean-text">Game Modes</span>
             </div>
             <h2 className="text-3xl font-bold text-turtle-lime mb-4 arcade-text">How to Play</h2>
             <p className="text-turtle-sand max-w-2xl clean-text">
@@ -70,7 +70,7 @@ const Guide = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6">
               <div className="flex items-start mb-4">
                 <div className="bg-turtle-lime/30 p-2 rounded-lg mr-4">
                   <Info className="w-5 h-5 text-turtle-lime" />
@@ -85,7 +85,7 @@ const Guide = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6">
               <div className="flex items-start mb-4">
                 <div className="bg-turtle-lime/30 p-2 rounded-lg mr-4">
                   <Info className="w-5 h-5 text-turtle-lime" />
@@ -100,7 +100,7 @@ const Guide = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6">
               <div className="flex items-start mb-4">
                 <div className="bg-turtle-lime/30 p-2 rounded-lg mr-4">
                   <Info className="w-5 h-5 text-turtle-lime" />
@@ -115,7 +115,7 @@ const Guide = () => {
               </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6">
+            <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-6">
               <div className="flex items-start mb-4">
                 <div className="bg-turtle-lime/30 p-2 rounded-lg mr-4">
                   <Info className="w-5 h-5 text-turtle-lime" />
@@ -143,31 +143,31 @@ const Guide = () => {
             </p>
           </div>
           
-          <div className="bg-white/10 backdrop-blur-md rounded-xl p-8">
+          <div className="bg-black/80 backdrop-blur-md border border-white/10 rounded-xl p-8">
             <div className="space-y-4">
               <div className="pb-4 border-b border-white/10">
-                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">1. No Cheating or Hacking</h3>
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 clean-text">1. No Cheating or Hacking</h3>
                 <p className="text-turtle-sand clean-text">
                   Using mods, hacks, or any unauthorized tools to gain an unfair advantage is strictly prohibited.
                 </p>
               </div>
               
               <div className="py-4 border-b border-white/10">
-                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">2. Respect All Players</h3>
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 clean-text">2. Respect All Players</h3>
                 <p className="text-turtle-sand clean-text">
                   Treat all players with respect. Harassment, bullying, or excessive toxicity will result in bans.
                 </p>
               </div>
               
               <div className="py-4 border-b border-white/10">
-                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">3. No Spamming</h3>
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 clean-text">3. No Spamming</h3>
                 <p className="text-turtle-sand clean-text">
                   Avoid spamming chat with repeated messages, excessive emotes, or advertisements.
                 </p>
               </div>
               
               <div className="py-4">
-                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">4. Follow Staff Instructions</h3>
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 clean-text">4. Follow Staff Instructions</h3>
                 <p className="text-turtle-sand clean-text">
                   Server moderators and administrators have the final say. Follow their instructions when given.
                 </p>

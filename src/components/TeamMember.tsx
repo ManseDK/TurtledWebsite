@@ -16,7 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   description, 
   image, 
   avatarImage,
-  color = "bg-red-500" 
+  color = "bg-turtle-lime" 
 }) => {
   const [isActive, setIsActive] = useState(false);
   
@@ -27,7 +27,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
       onMouseLeave={() => setIsActive(false)}
     >
       {isActive ? (
-        <div className="bg-turtle-sand/90 rounded-xl p-6 shadow-md h-full flex flex-col">
+        <div className="bg-black/90 rounded-xl p-6 shadow-md h-full flex flex-col">
           <div className="flex items-start mb-4">
             <div className="mr-4 flex-shrink-0">
               <div className="w-16 h-16 relative overflow-hidden rounded-md">
@@ -39,16 +39,16 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               </div>
             </div>
             <div>
-              <h3 className="arcade-text text-lg mb-1 text-turtle-green">{name}</h3>
-              <div className={`text-xs inline-block px-2 py-1 rounded-full text-white ${color} arcade-text`}>
+              <h3 className="arcade-text text-lg mb-1 text-turtle-lime">{name}</h3>
+              <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
                 {role}
               </div>
             </div>
           </div>
-          <p className="clean-text text-sm text-gray-700 flex-grow overflow-y-auto">{description}</p>
+          <p className="clean-text text-sm text-turtle-sand flex-grow overflow-y-auto max-h-32 md:max-h-none">{description}</p>
         </div>
       ) : (
-        <div className="bg-white/80 rounded-xl p-6 shadow-md text-center h-full flex flex-col items-center justify-center">
+        <div className="bg-black/80 rounded-xl p-6 shadow-md text-center h-full flex flex-col items-center justify-center">
           <div className="w-14 h-14 mb-3">
             <img 
               src={avatarImage} 
@@ -56,8 +56,8 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               className="turtle-pixel w-full h-full object-contain"
             />
           </div>
-          <h3 className="arcade-text text-base text-turtle-green mb-1">{name}</h3>
-          <div className={`text-xs inline-block px-2 py-1 rounded-full text-white ${color} arcade-text`}>
+          <h3 className="arcade-text text-base text-turtle-lime mb-1">{name}</h3>
+          <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
             {role}
           </div>
         </div>
