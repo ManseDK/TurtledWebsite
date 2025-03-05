@@ -271,16 +271,16 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Let's Be Social Section */}
+        {/* Let's Be Social Section - Updated with new Discord image */}
         <section className="py-16 px-4 bg-black relative rounded-t-3xl mt-12">
           <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent"></div>
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="md:w-1/2">
                 <img 
-                  src="/lovable-uploads/d16d93fc-5c37-43d1-abc3-505c6ec3e471.png" 
-                  alt="Discord mascot" 
-                  className="w-full max-w-md turtle-pixel mx-auto" 
+                  src="/lovable-uploads/a69db618-c5fe-45d4-95ee-495f7e6a533c.png" 
+                  alt="Discord logo" 
+                  className="w-full max-w-md mx-auto rounded-2xl" 
                 />
               </div>
               <div className="md:w-1/2 text-left">
@@ -303,8 +303,6 @@ const Index = () => {
                     </a>
                   ))}
                 </div>
-                
-                {/* Removed "JOIN OUR DISCORD" button as requested */}
               </div>
             </div>
           </div>
