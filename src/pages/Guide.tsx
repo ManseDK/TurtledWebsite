@@ -1,4 +1,3 @@
-
 import { Swords, Target, Users, Info } from 'lucide-react';
 import GameModeCard from '@/components/GameModeCard';
 import NavBar from '@/components/NavBar';
@@ -13,9 +12,9 @@ const Guide = () => {
       <NavBar />
       
       {/* Header */}
-      <section className="pt-32 pb-16 px-4 relative bg-gradient-to-b from-black to-turtle-blue/10">
+      <section className="pt-32 pb-16 px-4 relative bg-black">
         <div className="container mx-auto max-w-3xl text-center">
-          <h1 className="arcade-text text-4xl md:text-5xl text-white mb-6 shadow-glow-white animate-pulse-glow">GAME GUIDE</h1>
+          <h1 className="arcade-text text-4xl md:text-5xl text-white mb-6">GAME GUIDE</h1>
           <p className="text-lg text-white max-w-2xl mx-auto clean-text">
             Learn how to play each gamemode and master the art of turtle combat
           </p>

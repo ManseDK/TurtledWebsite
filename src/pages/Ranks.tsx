@@ -25,6 +25,13 @@ const Ranks = () => {
     "Monthly special rewards"
   ];
   
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -70,10 +77,8 @@ const Ranks = () => {
       <PageHeader 
         title="SERVER RANKS" 
         description="Support the server and get awesome perks with our premium ranks"
-        glowColor="white"
       />
       
-      {/* Ranks Section */}
       <section className="py-12 px-4 bg-black bg-opacity-90 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/70 pointer-events-none"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -97,7 +102,6 @@ const Ranks = () => {
         </div>
       </section>
       
-      {/* Benefits Section */}
       <section className="py-12 px-4 bg-black bg-opacity-90 text-white relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/80 pointer-events-none"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
@@ -142,7 +146,6 @@ const Ranks = () => {
         </div>
       </section>
       
-      {/* FAQ Section */}
       <section className="py-16 px-4 bg-black bg-opacity-90 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/80 pointer-events-none"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
@@ -207,16 +210,17 @@ const Ranks = () => {
         </div>
       </section>
       
-      {/* CTA Section - Changed heading to white */}
       <section className="py-16 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="arcade-text text-3xl text-white mb-6">READY TO RANK UP?</h2>
           <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text font-medium">
             Join the elite turtle warriors and enjoy exclusive perks on the server!
           </p>
-          <button className="bg-turtle-blue text-black clean-text font-bold py-3 px-6 rounded-lg
-            transition-all duration-300 hover:brightness-110 hover:scale-105
-            active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-blue/50">
+          <button 
+            onClick={scrollToTop}
+            className="bg-turtle-blue text-black clean-text font-bold py-3 px-6 rounded-lg
+              transition-all duration-300 hover:brightness-110 hover:scale-105
+              active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-blue/50">
             Purchase Rank Now
           </button>
         </div>
