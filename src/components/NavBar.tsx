@@ -32,67 +32,73 @@ const NavBar = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/80 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'
+        scrolled ? 'bg-black/90 backdrop-blur-md shadow-sm py-2' : 'bg-black/80 py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo and title */}
-        <div className="flex items-center space-x-8">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <Turtle className="text-turtle-green w-8 h-8 group-hover:animate-swim" />
-            <span className="arcade-text text-lg text-turtle-green">TURTLED</span>
+        <Link to="/" className="flex items-center space-x-2 group">
+          <Turtle className="text-turtle-lime w-8 h-8 group-hover:animate-swim" />
+          <span className="arcade-text text-lg text-turtle-lime">TURTLED</span>
+        </Link>
+        
+        {/* Navigation Links - Center Aligned */}
+        <div className="hidden md:flex items-center space-x-2">
+          <Link 
+            to="/" 
+            className={`rounded-md px-6 py-2 arcade-text transition-colors ${
+              isActive('/') 
+                ? 'bg-[#3b82f6] text-white' 
+                : 'text-white hover:bg-[#3b82f6]/80'
+            }`}
+          >
+            HOME
           </Link>
           
-          {/* Desktop navigation - moved to the left */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={`nav-link ${isActive('/') ? 'active' : ''}`}
-            >
-              <span className="flex items-center arcade-text">
-                <Home className="w-4 h-4 mr-1" /> HOME
-              </span>
-            </Link>
-            <Link 
-              to="/guide" 
-              className={`nav-link ${isActive('/guide') ? 'active' : ''}`}
-            >
-              <span className="flex items-center arcade-text">
-                <BookOpen className="w-4 h-4 mr-1" /> GUIDE
-              </span>
-            </Link>
-            <Link 
-              to="/ranks" 
-              className={`nav-link ${isActive('/ranks') ? 'active' : ''}`}
-            >
-              <span className="flex items-center arcade-text">
-                <Trophy className="w-4 h-4 mr-1" /> RANKS
-              </span>
-            </Link>
-          </div>
+          <Link 
+            to="/guide" 
+            className={`rounded-md px-6 py-2 arcade-text transition-colors ${
+              isActive('/guide') 
+                ? 'bg-[#3b82f6] text-white' 
+                : 'text-white hover:bg-[#3b82f6]/80'
+            }`}
+          >
+            GUIDE
+          </Link>
+          
+          <Link 
+            to="/ranks" 
+            className={`rounded-md px-6 py-2 arcade-text transition-colors ${
+              isActive('/ranks') 
+                ? 'bg-[#3b82f6] text-white' 
+                : 'text-white hover:bg-[#3b82f6]/80'
+            }`}
+          >
+            RANKS
+          </Link>
         </div>
         
         {/* Right side - Discord button and IP */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-3">
           <a 
             href="https://discord.gg/turtled" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-[#9b87f5] hover:bg-[#8a76e4] text-white px-4 py-2 rounded transition-colors"
+            className="bg-[#5865F2] text-white p-2 rounded-md transition-all hover:bg-[#4752c4]"
+            aria-label="Join our Discord"
           >
-            <span className="flex items-center arcade-text">
-              <MessageSquare className="w-4 h-4 mr-2" />
-            </span>
+            <MessageSquare className="w-6 h-6" />
           </a>
-          <div className="bg-[#F97316] text-white px-4 py-2 rounded arcade-text">
-            PLAY.TURTLED.COM
+          
+          <div className="bg-[#F5A524] text-black arcade-text px-4 py-2 rounded-md flex items-center">
+            PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
           </div>
         </div>
         
         {/* Mobile menu toggle */}
         <button 
           onClick={toggleMenu} 
-          className="md:hidden text-turtle-green hover:text-turtle-lime transition-colors"
+          className="md:hidden text-white hover:text-turtle-lime transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
@@ -105,45 +111,49 @@ const NavBar = () => {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg rounded-b-lg animate-fade-in">
-          <div className="container mx-auto p-4 flex flex-col space-y-4">
+        <div className="md:hidden absolute top-full left-0 w-full bg-black/95 shadow-lg rounded-b-lg animate-fade-in">
+          <div className="container mx-auto p-4 flex flex-col space-y-3">
             <Link 
               to="/" 
-              className={`nav-link text-center ${isActive('/') ? 'active' : ''}`}
+              className={`px-4 py-2 arcade-text rounded-md ${
+                isActive('/') ? 'bg-[#3b82f6] text-white' : 'text-white'
+              }`}
             >
-              <span className="flex items-center justify-center arcade-text">
-                <Home className="w-4 h-4 mr-2" /> HOME
-              </span>
+              HOME
             </Link>
+            
             <Link 
               to="/guide" 
-              className={`nav-link text-center ${isActive('/guide') ? 'active' : ''}`}
+              className={`px-4 py-2 arcade-text rounded-md ${
+                isActive('/guide') ? 'bg-[#3b82f6] text-white' : 'text-white'
+              }`}
             >
-              <span className="flex items-center justify-center arcade-text">
-                <BookOpen className="w-4 h-4 mr-2" /> GUIDE
-              </span>
+              GUIDE
             </Link>
+            
             <Link 
               to="/ranks" 
-              className={`nav-link text-center ${isActive('/ranks') ? 'active' : ''}`}
+              className={`px-4 py-2 arcade-text rounded-md ${
+                isActive('/ranks') ? 'bg-[#3b82f6] text-white' : 'text-white'
+              }`}
             >
-              <span className="flex items-center justify-center arcade-text">
-                <Trophy className="w-4 h-4 mr-2" /> RANKS
-              </span>
+              RANKS
             </Link>
-            <div className="flex flex-col space-y-2">
+            
+            <div className="flex flex-col space-y-3 pt-2 border-t border-white/10">
               <a 
                 href="https://discord.gg/turtled" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="bg-[#9b87f5] hover:bg-[#8a76e4] text-white px-4 py-2 rounded transition-colors"
+                className="bg-[#5865F2] hover:bg-[#4752c4] text-white px-4 py-2 rounded-md"
               >
                 <span className="flex items-center justify-center arcade-text">
-                  <MessageSquare className="w-4 h-4 mr-2" /> DISCORD
+                  <MessageSquare className="w-4 h-4 mr-2" /> JOIN DISCORD
                 </span>
               </a>
-              <div className="bg-[#F97316] text-white px-4 py-2 rounded arcade-text text-center">
-                PLAY.TURTLED.COM
+              
+              <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md arcade-text text-center">
+                PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
               </div>
             </div>
           </div>
