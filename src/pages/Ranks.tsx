@@ -3,6 +3,7 @@ import RankCard from '@/components/RankCard';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { CheckCircle, HelpCircle } from 'lucide-react';
+import Bubbles from '@/components/Bubbles';
 
 const Ranks = () => {
   const bubbleFeatures = [
@@ -25,6 +26,7 @@ const Ranks = () => {
 
   return (
     <div className="min-h-screen bg-black text-white">
+      <Bubbles count={15} />
       <NavBar />
       
       {/* Header */}
@@ -38,7 +40,7 @@ const Ranks = () => {
       </section>
       
       {/* Ranks Section */}
-      <section className="py-12 px-4 bg-turtle-sand/30">
+      <section className="py-12 px-4 bg-black">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <RankCard
@@ -61,10 +63,10 @@ const Ranks = () => {
       </section>
       
       {/* Benefits Section */}
-      <section className="py-12 px-4 bg-turtle-green text-white">
+      <section className="py-12 px-4 bg-black text-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="arcade-text text-3xl mb-4">RANK BENEFITS</h2>
+            <h2 className="arcade-text text-3xl mb-4 text-turtle-lime">RANK BENEFITS</h2>
             <p className="text-turtle-sand max-w-2xl mx-auto clean-text">
               Enhance your server experience with these exclusive features
             </p>
@@ -105,47 +107,47 @@ const Ranks = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="py-12 px-4 bg-turtle-sand/30">
+      <section className="py-12 px-4 bg-black">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="arcade-text text-3xl text-turtle-lime mb-4">FREQUENTLY ASKED QUESTIONS</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto clean-text">
+            <p className="text-gray-400 max-w-2xl mx-auto clean-text">
               Find answers to common questions about our ranks
             </p>
           </div>
           
-          <div className="bg-white/80 rounded-xl shadow-md p-8">
+          <div className="bg-white/10 backdrop-blur-md rounded-xl p-8">
             <div className="space-y-6">
-              <div className="pb-6 border-b border-gray-100">
+              <div className="pb-6 border-b border-white/10">
                 <div className="flex items-start">
                   <HelpCircle className="w-6 h-6 text-turtle-lime mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">How do I purchase a rank?</h3>
-                    <p className="text-gray-700 clean-text">
+                    <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">How do I purchase a rank?</h3>
+                    <p className="text-turtle-sand clean-text">
                       You can purchase ranks through our website store or by using the /buy command in-game. We accept PayPal, credit cards, and various other payment methods.
                     </p>
                   </div>
                 </div>
               </div>
               
-              <div className="py-6 border-b border-gray-100">
+              <div className="py-6 border-b border-white/10">
                 <div className="flex items-start">
                   <HelpCircle className="w-6 h-6 text-turtle-lime mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">How long do ranks last?</h3>
-                    <p className="text-gray-700 clean-text">
+                    <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">How long do ranks last?</h3>
+                    <p className="text-turtle-sand clean-text">
                       All ranks are permanent and do not expire. Once purchased, you'll have the rank forever on our server.
                     </p>
                   </div>
                 </div>
               </div>
               
-              <div className="py-6 border-b border-gray-100">
+              <div className="py-6 border-b border-white/10">
                 <div className="flex items-start">
                   <HelpCircle className="w-6 h-6 text-turtle-lime mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">Can I upgrade my rank later?</h3>
-                    <p className="text-gray-700 clean-text">
+                    <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">Can I upgrade my rank later?</h3>
+                    <p className="text-turtle-sand clean-text">
                       Yes! If you purchase the Bubble rank and later want to upgrade to Turtle, you'll only need to pay the difference in price.
                     </p>
                   </div>
@@ -156,8 +158,8 @@ const Ranks = () => {
                 <div className="flex items-start">
                   <HelpCircle className="w-6 h-6 text-turtle-lime mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">Do ranks give gameplay advantages?</h3>
-                    <p className="text-gray-700 clean-text">
+                    <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">Do ranks give gameplay advantages?</h3>
+                    <p className="text-turtle-sand clean-text">
                       No, our ranks are designed to be cosmetic and provide quality-of-life features without offering unfair advantages in PVP combat. We maintain a balanced playing field for all players.
                     </p>
                   </div>
@@ -169,13 +171,15 @@ const Ranks = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-turtle-green/90">
+      <section className="py-16 px-4 bg-[#f5a623]">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="arcade-text text-3xl text-turtle-lime mb-6">READY TO RANK UP?</h2>
-          <p className="text-lg text-white mb-8 max-w-2xl mx-auto clean-text">
+          <h2 className="arcade-text text-3xl text-black mb-6">READY TO RANK UP?</h2>
+          <p className="text-lg text-black mb-8 max-w-2xl mx-auto clean-text font-medium">
             Join the elite turtle warriors and enjoy exclusive perks on the server!
           </p>
-          <button className="btn-primary clean-text font-bold">
+          <button className="bg-turtle-lime text-black clean-text font-bold py-3 px-6 rounded-lg
+            transition-all duration-300 hover:brightness-110 hover:scale-105
+            active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-lime/50">
             Purchase Rank Now
           </button>
         </div>

@@ -3,10 +3,12 @@ import { Swords, Target, Users, Info } from 'lucide-react';
 import GameModeCard from '@/components/GameModeCard';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import Bubbles from '@/components/Bubbles';
 
 const Guide = () => {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Bubbles count={15} />
       <NavBar />
       
       {/* Header */}
@@ -20,11 +22,11 @@ const Guide = () => {
       </section>
       
       {/* Game Modes Section */}
-      <section className="py-12 px-4 bg-turtle-sand/30">
+      <section className="py-12 px-4 bg-black">
         <div className="container mx-auto max-w-4xl">
           <div className="mb-12">
             <div className="inline-block bg-turtle-lime/20 px-3 py-1 rounded-full mb-2">
-              <span className="text-sm font-semibold text-turtle-green arcade-text">Game Modes</span>
+              <span className="text-sm font-semibold text-turtle-lime arcade-text">Game Modes</span>
             </div>
             <h2 className="text-3xl font-bold text-turtle-lime mb-4 arcade-text">How to Play</h2>
             <p className="text-turtle-sand max-w-2xl clean-text">
@@ -58,10 +60,10 @@ const Guide = () => {
       </section>
       
       {/* Tips Section */}
-      <section className="py-12 px-4 bg-turtle-green text-white">
+      <section className="py-12 px-4 bg-black text-white">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <h2 className="arcade-text text-3xl mb-4">PRO TIPS</h2>
+            <h2 className="arcade-text text-3xl mb-4 text-turtle-lime">PRO TIPS</h2>
             <p className="text-turtle-sand max-w-2xl mx-auto clean-text">
               Master these techniques to dominate the competition
             </p>
@@ -132,41 +134,41 @@ const Guide = () => {
       </section>
       
       {/* Server Rules */}
-      <section className="py-12 px-4 bg-turtle-sand/30">
+      <section className="py-12 px-4 bg-black">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
             <h2 className="arcade-text text-3xl text-turtle-lime mb-4">SERVER RULES</h2>
-            <p className="text-gray-700 max-w-2xl mx-auto clean-text">
+            <p className="text-turtle-sand max-w-2xl mx-auto clean-text">
               Please follow these rules to ensure a fun and fair experience for everyone
             </p>
           </div>
           
-          <div className="bg-white/80 rounded-xl shadow-md p-8">
+          <div className="bg-white/10 backdrop-blur-md rounded-xl p-8">
             <div className="space-y-4">
-              <div className="pb-4 border-b border-gray-100">
-                <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">1. No Cheating or Hacking</h3>
-                <p className="text-gray-700 clean-text">
+              <div className="pb-4 border-b border-white/10">
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">1. No Cheating or Hacking</h3>
+                <p className="text-turtle-sand clean-text">
                   Using mods, hacks, or any unauthorized tools to gain an unfair advantage is strictly prohibited.
                 </p>
               </div>
               
-              <div className="py-4 border-b border-gray-100">
-                <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">2. Respect All Players</h3>
-                <p className="text-gray-700 clean-text">
+              <div className="py-4 border-b border-white/10">
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">2. Respect All Players</h3>
+                <p className="text-turtle-sand clean-text">
                   Treat all players with respect. Harassment, bullying, or excessive toxicity will result in bans.
                 </p>
               </div>
               
-              <div className="py-4 border-b border-gray-100">
-                <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">3. No Spamming</h3>
-                <p className="text-gray-700 clean-text">
+              <div className="py-4 border-b border-white/10">
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">3. No Spamming</h3>
+                <p className="text-turtle-sand clean-text">
                   Avoid spamming chat with repeated messages, excessive emotes, or advertisements.
                 </p>
               </div>
               
               <div className="py-4">
-                <h3 className="text-xl font-bold text-turtle-green mb-2 arcade-text">4. Follow Staff Instructions</h3>
-                <p className="text-gray-700 clean-text">
+                <h3 className="text-xl font-bold text-turtle-lime mb-2 arcade-text">4. Follow Staff Instructions</h3>
+                <p className="text-turtle-sand clean-text">
                   Server moderators and administrators have the final say. Follow their instructions when given.
                 </p>
               </div>

@@ -46,7 +46,7 @@ const NavBar = () => {
         <div className="hidden md:flex items-center space-x-2">
           <Link 
             to="/" 
-            className={`rounded-md px-6 py-2 arcade-text transition-colors ${
+            className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/') 
                 ? 'bg-[#3b82f6] text-white' 
                 : 'text-white hover:bg-[#3b82f6]/80'
@@ -57,7 +57,7 @@ const NavBar = () => {
           
           <Link 
             to="/guide" 
-            className={`rounded-md px-6 py-2 arcade-text transition-colors ${
+            className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/guide') 
                 ? 'bg-[#3b82f6] text-white' 
                 : 'text-white hover:bg-[#3b82f6]/80'
@@ -68,7 +68,7 @@ const NavBar = () => {
           
           <Link 
             to="/ranks" 
-            className={`rounded-md px-6 py-2 arcade-text transition-colors ${
+            className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/ranks') 
                 ? 'bg-[#3b82f6] text-white' 
                 : 'text-white hover:bg-[#3b82f6]/80'
@@ -90,7 +90,7 @@ const NavBar = () => {
             <MessageSquare className="w-6 h-6" />
           </a>
           
-          <div className="bg-[#F5A524] text-black arcade-text px-4 py-2 rounded-md flex items-center">
+          <div className="bg-[#F5A524] text-black clean-text font-bold px-4 py-2 rounded-md flex items-center">
             PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
           </div>
         </div>
@@ -115,7 +115,7 @@ const NavBar = () => {
           <div className="container mx-auto p-4 flex flex-col space-y-3">
             <Link 
               to="/" 
-              className={`px-4 py-2 arcade-text rounded-md ${
+              className={`px-4 py-2 clean-text font-bold rounded-md ${
                 isActive('/') ? 'bg-[#3b82f6] text-white' : 'text-white'
               }`}
             >
@@ -124,7 +124,7 @@ const NavBar = () => {
             
             <Link 
               to="/guide" 
-              className={`px-4 py-2 arcade-text rounded-md ${
+              className={`px-4 py-2 clean-text font-bold rounded-md ${
                 isActive('/guide') ? 'bg-[#3b82f6] text-white' : 'text-white'
               }`}
             >
@@ -133,7 +133,7 @@ const NavBar = () => {
             
             <Link 
               to="/ranks" 
-              className={`px-4 py-2 arcade-text rounded-md ${
+              className={`px-4 py-2 clean-text font-bold rounded-md ${
                 isActive('/ranks') ? 'bg-[#3b82f6] text-white' : 'text-white'
               }`}
             >
@@ -147,12 +147,12 @@ const NavBar = () => {
                 rel="noopener noreferrer" 
                 className="bg-[#5865F2] hover:bg-[#4752c4] text-white px-4 py-2 rounded-md"
               >
-                <span className="flex items-center justify-center arcade-text">
+                <span className="flex items-center justify-center clean-text font-bold">
                   <MessageSquare className="w-4 h-4 mr-2" /> JOIN DISCORD
                 </span>
               </a>
               
-              <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md arcade-text text-center">
+              <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md clean-text font-bold text-center">
                 PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
               </div>
             </div>

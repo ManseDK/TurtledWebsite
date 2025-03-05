@@ -22,15 +22,15 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   
   return (
     <div 
-      className={`transition-all duration-300 ${isActive ? 'scale-105' : ''}`}
+      className={`transition-all duration-300 h-full ${isActive ? 'scale-105' : ''}`}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
     >
       {isActive ? (
-        <div className="bg-turtle-sand/90 rounded-xl p-6 shadow-md h-full">
+        <div className="bg-turtle-sand/90 rounded-xl p-6 shadow-md h-full flex flex-col">
           <div className="flex items-start mb-4">
-            <div className="mr-4">
-              <div className="w-20 h-20 relative overflow-hidden rounded-md">
+            <div className="mr-4 flex-shrink-0">
+              <div className="w-16 h-16 relative overflow-hidden rounded-md">
                 <img 
                   src={image} 
                   alt={`${name} character`} 
@@ -45,7 +45,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               </div>
             </div>
           </div>
-          <p className="clean-text text-sm text-gray-700">{description}</p>
+          <p className="clean-text text-sm text-gray-700 flex-grow overflow-y-auto">{description}</p>
         </div>
       ) : (
         <div className="bg-white/80 rounded-xl p-6 shadow-md text-center h-full flex flex-col items-center justify-center">
