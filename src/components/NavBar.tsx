@@ -144,7 +144,7 @@ const NavBar = () => {
             
             <div className="flex flex-col space-y-3 pt-2 border-t border-white/10">
               <a 
-                href="https://discord.gg/turtled" 
+                href="https://discord.gg/Z7gbhxmB" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-[#5865F2] hover:bg-[#4752c4] text-white px-4 py-2 rounded-md"
