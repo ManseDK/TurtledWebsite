@@ -16,52 +16,52 @@ const Index = () => {
   
   const teamMembers = [
     {
-      name: "TurtleKing",
+      name: "Manse",
       role: "SERVER OWNER",
       description: "I founded Turtled back in 2020 with the vision of creating the best PVP experience in Minecraft. I manage the server infrastructure and development team to ensure everything runs smoothly!",
+      image: "/lovable-uploads/c3e2c66e-9fcc-4433-8e86-63e1d1a45d2e.png",
+      avatarImage: "/lovable-uploads/c3e2c66e-9fcc-4433-8e86-63e1d1a45d2e.png",
+      color: "bg-purple-600"
+    },
+    {
+      name: "Manere",
+      role: "SERVER OWNER",
+      description: "I've been with Turtled since the beginning, helping to shape our server into what it is today. I focus on strategic decisions and ensuring our community thrives with new and exciting content!",
       image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
       avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
       color: "bg-purple-600"
     },
     {
-      name: "ShellMaster",
-      role: "LEAD DEVELOPER",
-      description: "I've been coding plugins for Minecraft servers for over 5 years. At Turtled, I create custom game modes and ensure all our systems work perfectly together. I love building new features for our players!",
+      name: "Auto",
+      role: "SERVER OWNER",
+      description: "I help oversee the technical aspects of Turtled, making sure our infrastructure is solid and reliable. I work closely with our development team to implement new features and improvements.",
       image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
+      avatarImage: "/lovable-uploads/1a88a472-f859-4237-bdac-00adc5406218.png",
+      color: "bg-purple-600"
+    },
+    {
+      name: "Daniel",
+      role: "DEVELOPER",
+      description: "I develop custom plugins and features for Turtled. With extensive experience in Minecraft server development, I create unique gameplay mechanics that make our server stand out from the rest.",
+      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+      avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
       color: "bg-blue-600"
     },
     {
-      name: "BubbleMaster",
-      role: "COMMUNITY MANAGER",
-      description: "I'm responsible for making sure everyone has a great time on our server! I organize events, manage our Discord, and work with our staff team to maintain a friendly community where everyone feels welcome.",
+      name: "Mini",
+      role: "BUILDER",
+      description: "I create the beautiful maps and structures you see on Turtled. My focus is on designing immersive environments that enhance gameplay while maintaining our distinctive tropical aesthetic.",
       image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/1a88a472-f859-4237-bdac-00adc5406218.png",
-      color: "bg-red-500"
-    },
-    {
-      name: "PixelTurtle",
-      role: "MAP DESIGNER",
-      description: "I design all the beautiful maps you play on! From tropical islands to ancient ruins, I love creating immersive environments for epic battles. Each map is carefully designed for balanced and exciting gameplay.",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
+      avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
       color: "bg-green-600"
     },
     {
-      name: "WaveRider",
-      role: "EVENT COORDINATOR",
-      description: "I plan and execute all of our special events and tournaments! From seasonal competitions to weekly challenges, I make sure there's always something exciting happening on the server. Join us for awesome prizes and glory!",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
-      color: "bg-yellow-500"
-    },
-    {
-      name: "ReefKeeper",
-      role: "SUPPORT SPECIALIST",
-      description: "Need help with anything on the server? I'm your turtle! I handle player support tickets, resolve disputes, and make sure everyone follows the rules. I'm dedicated to making your experience on Turtled as smooth as possible!",
+      name: "Myron",
+      role: "BUILDER/MANAGER",
+      description: "I split my time between creating stunning builds and helping manage our team of builders. I ensure our server's visual style remains consistent while coordinating projects across the server.",
       image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
       avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
-      color: "bg-indigo-500"
+      color: "bg-yellow-500"
     }
   ];
 
