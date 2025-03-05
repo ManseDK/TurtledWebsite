@@ -73,19 +73,19 @@ const Index = () => {
       color: "bg-[#5865F2]"
     },
     {
-      name: "Forums",
-      icon: <Users className="w-8 h-8" />,
-      color: "bg-[#FF6B6B]"
+      name: "Instagram",
+      icon: <Instagram className="w-8 h-8" />,
+      color: "bg-[#E1306C]"
     },
     {
-      name: "GitHub",
-      icon: <GitBranch className="w-8 h-8" />,
-      color: "bg-[#333333]"
+      name: "YouTube",
+      icon: <Youtube className="w-8 h-8" />,
+      color: "bg-[#FF0000]"
     },
     {
-      name: "Support",
-      icon: <Headphones className="w-8 h-8" />,
-      color: "bg-[#00B894]"
+      name: "Twitter",
+      icon: <Twitter className="w-8 h-8" />,
+      color: "bg-[#1DA1F2]"
     }
   ];
 
@@ -137,7 +137,7 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}`}>
                 <h1 className="arcade-text text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight">
-                  WELCOME TO <span className="text-turtle-blue animate-pulse-glow shadow-glow">TURTLED</span>
+                  WELCOME TO <span className="text-turtle-blue shadow-glow">TURTLED</span>
                 </h1>
                 <p className="text-lg md:text-xl text-turtle-sand mb-8 clean-text">
                   Join the ultimate Minecraft PVP server with tropical vibes, competitive gamemodes, and an awesome community
@@ -155,7 +155,7 @@ const Index = () => {
               <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/guide" className="btn-primary w-full sm:w-auto clean-text font-bold">
-                    Get Started
+                    <span className="text-white shadow-glow-white">Get Started</span>
                   </Link>
                   <Link to="/ranks" className="btn-secondary w-full sm:w-auto clean-text font-bold">
                     View Ranks
@@ -208,7 +208,7 @@ const Index = () => {
         <section ref={statsRef} className="py-16 px-4 bg-gradient-to-b from-black to-black/95">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-white mb-4 shadow-glow animate-pulse-glow">SERVER STATS</h2>
+              <h2 className="arcade-text text-3xl text-white mb-4 shadow-glow-white animate-pulse-glow">SERVER STATS</h2>
               <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Join our growing community of tropical warriors
               </p>
@@ -218,28 +218,28 @@ const Index = () => {
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '0ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">1000+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">1000+</span>
                 <span className="text-blue-300 clean-text">Active Players</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '150ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">50+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">50+</span>
                 <span className="text-blue-300 clean-text">Custom Maps</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '300ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">24/7</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">24/7</span>
                 <span className="text-blue-300 clean-text">Server Uptime</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '450ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">10+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">10+</span>
                 <span className="text-blue-300 clean-text">Events Monthly</span>
               </div>
             </div>
@@ -285,7 +285,7 @@ const Index = () => {
                 />
               </div>
               <div className="md:w-1/2 text-left">
-                <h2 className="arcade-text text-3xl text-turtle-blue mb-4">Let's Be Social!</h2>
+                <h2 className="arcade-text text-3xl text-white mb-4">Let's Be Social!</h2>
                 <p className="text-blue-300 clean-text mb-6">
                   Here on Turtled we think communication is the key to an amazing community. Because of that, we heavily value our Discord and the way it allows us to connect with our favourite people ever - you! Come join us, and let's create our server - together!
                 </p>
@@ -321,7 +321,7 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-16 px-4 bg-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-[#E7FF93] mb-6 shadow-glow animate-pulse-glow">READY TO DIVE IN?</h2>
+            <h2 className="arcade-text text-3xl text-[#D6FF42] mb-6 shadow-glow-lime">READY TO DIVE IN?</h2>
             <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>

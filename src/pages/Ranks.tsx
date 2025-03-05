@@ -2,7 +2,7 @@
 import RankCard from '@/components/RankCard';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { CheckCircle, HelpCircle, MessageSquare, GitBranch, Headphones, Users } from 'lucide-react';
+import { CheckCircle, HelpCircle, MessageSquare, Instagram, Twitter, Youtube } from 'lucide-react';
 import Bubbles from '@/components/Bubbles';
 import { useEffect } from 'react';
 
@@ -70,19 +70,19 @@ const Ranks = () => {
       color: "bg-[#5865F2]"
     },
     {
-      name: "Forums",
-      icon: <Users className="w-8 h-8" />,
-      color: "bg-[#FF6B6B]"
+      name: "Instagram",
+      icon: <Instagram className="w-8 h-8" />,
+      color: "bg-[#E1306C]"
     },
     {
-      name: "GitHub",
-      icon: <GitBranch className="w-8 h-8" />,
-      color: "bg-[#333333]"
+      name: "YouTube",
+      icon: <Youtube className="w-8 h-8" />,
+      color: "bg-[#FF0000]"
     },
     {
-      name: "Support",
-      icon: <Headphones className="w-8 h-8" />,
-      color: "bg-[#00B894]"
+      name: "Twitter",
+      icon: <Twitter className="w-8 h-8" />,
+      color: "bg-[#1DA1F2]"
     }
   ];
 
@@ -94,7 +94,7 @@ const Ranks = () => {
       {/* Header */}
       <section className="pt-32 pb-16 px-4 relative bg-gradient-to-b from-black to-black/90">
         <div className="container mx-auto max-w-3xl text-center">
-          <h1 className="arcade-text text-4xl md:text-5xl text-turtle-blue mb-6 shadow-glow">SERVER RANKS</h1>
+          <h1 className="arcade-text text-4xl md:text-5xl text-white mb-6 shadow-glow-white">SERVER RANKS</h1>
           <p className="text-lg text-blue-300 max-w-2xl mx-auto clean-text">
             Support the server and get awesome perks with our premium ranks
           </p>
@@ -248,7 +248,7 @@ const Ranks = () => {
               />
             </div>
             <div className="md:w-1/2 text-left">
-              <h2 className="arcade-text text-3xl text-turtle-blue mb-4">Let's Be Social!</h2>
+              <h2 className="arcade-text text-3xl text-white mb-4">Let's Be Social!</h2>
               <p className="text-blue-300 clean-text mb-6">
                 Here on Turtled we think communication is the key to an amazing community. Because of that, we heavily value our Discord and the way it allows us to connect with our favourite people ever - you! Come join us, and let's create our server - together!
               </p>
@@ -284,7 +284,7 @@ const Ranks = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="arcade-text text-3xl text-[#E7FF93] mb-6 shadow-glow animate-pulse-glow">READY TO RANK UP?</h2>
+          <h2 className="arcade-text text-3xl text-[#D6FF42] mb-6 shadow-glow-lime">READY TO RANK UP?</h2>
           <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text font-medium">
             Join the elite turtle warriors and enjoy exclusive perks on the server!
           </p>

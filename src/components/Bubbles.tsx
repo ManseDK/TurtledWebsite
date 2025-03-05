@@ -74,7 +74,6 @@ const Bubbles: React.FC<BubblesProps> = ({
     <div 
       ref={containerRef} 
       className={`fixed bottom-0 left-0 w-full h-full overflow-hidden pointer-events-none z-50 ${containerClass}`}
-      style={{ position: 'fixed', pointerEvents: "none" }}
     />
   );
 };
