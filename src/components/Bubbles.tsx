@@ -73,8 +73,8 @@ const Bubbles: React.FC<BubblesProps> = ({
   return (
     <div 
       ref={containerRef} 
-      className={`fixed inset-0 overflow-hidden pointer-events-none z-50 ${containerClass}`}
-      style={{ pointerEvents: "none" }}
+      className={`fixed bottom-0 left-0 w-full h-full overflow-hidden pointer-events-none z-50 ${containerClass}`}
+      style={{ position: 'fixed', pointerEvents: "none" }}
     />
   );
 };

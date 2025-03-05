@@ -94,7 +94,7 @@ const Ranks = () => {
       {/* Header */}
       <section className="pt-32 pb-16 px-4 relative bg-gradient-to-b from-black to-black/90">
         <div className="container mx-auto max-w-3xl text-center">
-          <h1 className="arcade-text text-4xl md:text-5xl text-turtle-blue mb-6">SERVER RANKS</h1>
+          <h1 className="arcade-text text-4xl md:text-5xl text-turtle-blue mb-6 shadow-glow">SERVER RANKS</h1>
           <p className="text-lg text-blue-300 max-w-2xl mx-auto clean-text">
             Support the server and get awesome perks with our premium ranks
           </p>
@@ -284,7 +284,7 @@ const Ranks = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="arcade-text text-3xl text-yellow-400 mb-6">READY TO RANK UP?</h2>
+          <h2 className="arcade-text text-3xl text-[#E7FF93] mb-6 shadow-glow animate-pulse-glow">READY TO RANK UP?</h2>
           <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text font-medium">
             Join the elite turtle warriors and enjoy exclusive perks on the server!
           </p>

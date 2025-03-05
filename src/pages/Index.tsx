@@ -66,6 +66,29 @@ const Index = () => {
     }
   ];
 
+  const socialLinks = [
+    {
+      name: "Discord",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "bg-[#5865F2]"
+    },
+    {
+      name: "Forums",
+      icon: <Users className="w-8 h-8" />,
+      color: "bg-[#FF6B6B]"
+    },
+    {
+      name: "GitHub",
+      icon: <GitBranch className="w-8 h-8" />,
+      color: "bg-[#333333]"
+    },
+    {
+      name: "Support",
+      icon: <Headphones className="w-8 h-8" />,
+      color: "bg-[#00B894]"
+    }
+  ];
+
   useEffect(() => {
     // Trigger animation after component mounts
     setTimeout(() => {
@@ -114,7 +137,7 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}`}>
                 <h1 className="arcade-text text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight">
-                  WELCOME TO <span className="text-turtle-blue animate-pulse-glow">TURTLED</span>
+                  WELCOME TO <span className="text-turtle-blue animate-pulse-glow shadow-glow">TURTLED</span>
                 </h1>
                 <p className="text-lg md:text-xl text-turtle-sand mb-8 clean-text">
                   Join the ultimate Minecraft PVP server with tropical vibes, competitive gamemodes, and an awesome community
@@ -185,7 +208,7 @@ const Index = () => {
         <section ref={statsRef} className="py-16 px-4 bg-gradient-to-b from-black to-black/95">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-turtle-blue mb-4 animate-pulse-glow">SERVER STATS</h2>
+              <h2 className="arcade-text text-3xl text-white mb-4 shadow-glow animate-pulse-glow">SERVER STATS</h2>
               <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Join our growing community of tropical warriors
               </p>
@@ -195,28 +218,28 @@ const Index = () => {
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '0ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">1000+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">1000+</span>
                 <span className="text-blue-300 clean-text">Active Players</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '150ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">50+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">50+</span>
                 <span className="text-blue-300 clean-text">Custom Maps</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '300ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">24/7</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">24/7</span>
                 <span className="text-blue-300 clean-text">Server Uptime</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '450ms'
             }}>
-                <span className="block text-4xl font-bold text-turtle-blue mb-2 arcade-text">10+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow">10+</span>
                 <span className="text-blue-300 clean-text">Events Monthly</span>
               </div>
             </div>
@@ -250,32 +273,47 @@ const Index = () => {
         </section>
         
         {/* Let's Be Social Section */}
-        <section className="py-16 px-4 bg-gradient-to-b from-black/90 to-black">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-turtle-blue mb-6 animate-pulse-glow">LET'S BE SOCIAL</h2>
-            <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
-              Follow us on social media to stay updated with the latest news and events!
-            </p>
-            
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-4 max-w-3xl mx-auto">
-              <a href="#" className="social-icon-link bg-blue-600 hover:bg-blue-700 transition-all p-4 rounded-lg flex items-center justify-center group">
-                <Facebook className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="social-icon-link bg-blue-400 hover:bg-blue-500 transition-all p-4 rounded-lg flex items-center justify-center group">
-                <Twitter className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="social-icon-link bg-gradient-to-br from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all p-4 rounded-lg flex items-center justify-center group">
-                <Instagram className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="social-icon-link bg-red-600 hover:bg-red-700 transition-all p-4 rounded-lg flex items-center justify-center group">
-                <Youtube className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="social-icon-link bg-purple-700 hover:bg-purple-800 transition-all p-4 rounded-lg flex items-center justify-center group">
-                <Twitch className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
-              </a>
-              <a href="#" className="social-icon-link bg-[#5865F2] hover:bg-[#4752c4] transition-all p-4 rounded-lg flex items-center justify-center group">
-                <MessageSquare className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
-              </a>
+        <section className="py-16 px-4 bg-black relative rounded-t-3xl mt-12">
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent"></div>
+          <div className="container mx-auto max-w-6xl relative z-10">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="md:w-1/2">
+                <img 
+                  src="/lovable-uploads/d16d93fc-5c37-43d1-abc3-505c6ec3e471.png" 
+                  alt="Discord mascot" 
+                  className="w-full max-w-md turtle-pixel mx-auto" 
+                />
+              </div>
+              <div className="md:w-1/2 text-left">
+                <h2 className="arcade-text text-3xl text-turtle-blue mb-4">Let's Be Social!</h2>
+                <p className="text-blue-300 clean-text mb-6">
+                  Here on Turtled we think communication is the key to an amazing community. Because of that, we heavily value our Discord and the way it allows us to connect with our favourite people ever - you! Come join us, and let's create our server - together!
+                </p>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {socialLinks.map((link, index) => (
+                    <a 
+                      key={index}
+                      href="#" 
+                      className={`${link.color} hover:opacity-90 p-4 rounded-lg flex items-center justify-center transition-transform hover:scale-105`}
+                    >
+                      <div className="flex flex-col items-center">
+                        {link.icon}
+                        <span className="mt-2 font-bold clean-text text-white">{link.name}</span>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+                
+                <a 
+                  href="https://discord.gg/turtled" 
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  className="inline-block bg-[#5865F2] hover:bg-[#4752c4] text-white py-3 px-10 rounded-lg font-bold transition-all duration-300 clean-text"
+                >
+                  JOIN OUR DISCORD
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -283,7 +321,7 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-16 px-4 bg-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-yellow-400 mb-6 animate-pulse-glow">READY TO DIVE IN?</h2>
+            <h2 className="arcade-text text-3xl text-[#E7FF93] mb-6 shadow-glow animate-pulse-glow">READY TO DIVE IN?</h2>
             <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>
