@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Turtle, Home, BookOpen, Trophy, Menu, X } from 'lucide-react';
@@ -23,7 +22,6 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
@@ -40,7 +38,7 @@ const NavBar = () => {
         {/* Logo and title */}
         <Link to="/" className="flex items-center space-x-2 group">
           <Turtle className="text-turtle-green w-8 h-8 group-hover:animate-swim" />
-          <span className="arcade-text text-lg text-turtle-green">TURTLE PVP</span>
+          <span className="arcade-text text-lg text-turtle-green">TURTLED</span>
         </Link>
         
         {/* Desktop navigation */}

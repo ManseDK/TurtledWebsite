@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 mb-4 md:mb-0">
             <Turtle className="w-6 h-6 animate-swim" />
-            <span className="arcade-text text-sm">TURTLE PVP</span>
+            <span className="arcade-text text-sm">TURTLED</span>
           </div>
           
           <div className="flex items-center space-x-1 text-sm">
@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           
           <div className="mt-4 md:mt-0 text-sm">
-            <span>&copy; {new Date().getFullYear()} Turtle PVP Server</span>
+            <span>&copy; {new Date().getFullYear()} Turtled Server</span>
           </div>
         </div>
       </div>

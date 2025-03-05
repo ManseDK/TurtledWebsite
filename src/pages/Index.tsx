@@ -1,6 +1,7 @@
+
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Swords, Target, Users } from 'lucide-react';
+import { Gamepad2, Swords, Target, Users, Copy, CheckCircle } from 'lucide-react';
 import TurtleAnimation from '@/components/TurtleAnimation';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -10,6 +11,7 @@ const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
   const [isStatsVisible, setIsStatsVisible] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     // Trigger animation after component mounts
@@ -34,6 +36,13 @@ const Index = () => {
     };
   }, []);
 
+  const handleCopyIP = () => {
+    navigator.clipboard.writeText('eu.turtled.net').then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Video Background */}
@@ -48,11 +57,27 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}`}>
                 <h1 className="arcade-text text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight">
-                  WELCOME TO <span className="text-turtle-lime">TURTLE</span> PVP
+                  WELCOME TO <span className="text-turtle-lime">TURTLED</span>
                 </h1>
                 <p className="text-lg md:text-xl text-turtle-sand mb-8">
                   Join the ultimate Minecraft PVP server with tropical vibes, competitive gamemodes, and an awesome community
                 </p>
+                
+                {/* Server IP Copy Button */}
+                <div className="flex justify-center mb-8">
+                  <button 
+                    onClick={handleCopyIP}
+                    className="flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-lg py-3 px-6 text-white hover:bg-white/20 transition-colors"
+                    aria-label="Copy server IP"
+                  >
+                    <span className="arcade-text">eu.turtled.net</span>
+                    {copied ? (
+                      <CheckCircle className="w-5 h-5 text-turtle-lime" />
+                    ) : (
+                      <Copy className="w-5 h-5" />
+                    )}
+                  </button>
+                </div>
               </div>
               
               <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -163,11 +188,19 @@ const Index = () => {
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="arcade-text text-3xl text-turtle-green mb-6">READY TO DIVE IN?</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Join the Turtle PVP Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
+              Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="btn-primary">
-                Join Server Now
+              <button 
+                onClick={handleCopyIP} 
+                className="btn-primary flex items-center justify-center space-x-2"
+              >
+                <span>Join Server Now</span>
+                {copied ? (
+                  <CheckCircle className="w-5 h-5" />
+                ) : (
+                  <Copy className="w-5 h-5" />
+                )}
               </button>
               <Link to="/guide" className="btn-secondary">
                 Learn More
