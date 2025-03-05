@@ -1,4 +1,3 @@
-
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, MessageSquare, GitBranch, Headphones } from 'lucide-react';
@@ -246,8 +245,8 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Meet the Team Section */}
-        <section className="py-16 px-4 bg-[#E8E0CC] rounded-t-3xl relative">
+        {/* Meet the Team Section - Updated with rounded corners for bottom as well */}
+        <section className="py-16 px-4 bg-[#E8E0CC] rounded-t-3xl rounded-b-3xl relative">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="arcade-text text-3xl text-black mb-4">MEET THE TEAM</h2>
@@ -272,7 +271,7 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Let's Be Social Section */}
+        {/* Let's Be Social Section - Removed Discord button as requested */}
         <section className="py-16 px-4 bg-black relative rounded-t-3xl mt-12">
           <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent"></div>
           <div className="container mx-auto max-w-6xl relative z-10">
@@ -305,23 +304,16 @@ const Index = () => {
                   ))}
                 </div>
                 
-                <a 
-                  href="https://discord.gg/turtled" 
-                  target="_blank"
-                  rel="noopener noreferrer" 
-                  className="inline-block bg-[#5865F2] hover:bg-[#4752c4] text-white py-3 px-10 rounded-lg font-bold transition-all duration-300 clean-text"
-                >
-                  JOIN OUR DISCORD
-                </a>
+                {/* Removed "JOIN OUR DISCORD" button as requested */}
               </div>
             </div>
           </div>
         </section>
         
-        {/* CTA Section */}
+        {/* CTA Section - Changed heading to white */}
         <section className="py-16 px-4 bg-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-[#D6FF42] mb-6 shadow-glow-lime">READY TO DIVE IN?</h2>
+            <h2 className="arcade-text text-3xl text-white mb-6 shadow-glow-white">READY TO DIVE IN?</h2>
             <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>
