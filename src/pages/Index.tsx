@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Swords, Target, Users, Copy, CheckCircle, Facebook, Twitter, Instagram, Youtube, Twitch, MessageSquare, GitBranch, Headphones } from 'lucide-react';
+import { Swords, Target, Users, Copy, CheckCircle, Instagram, Twitter, Youtube, MessageSquare } from 'lucide-react';
 import TurtleAnimation from '@/components/TurtleAnimation';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -136,7 +136,7 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <div className={`transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0 -translate-y-10'}`}>
                 <h1 className="arcade-text text-4xl md:text-5xl lg:text-6xl mb-6 text-white leading-tight">
-                  WELCOME TO <span className="text-turtle-blue shadow-glow">TURTLED</span>
+                  WELCOME TO <span className="text-turtle-blue">TURTLED</span>
                 </h1>
                 <p className="text-lg md:text-xl text-turtle-sand mb-8 clean-text">
                   Join the ultimate Minecraft PVP server with tropical vibes, competitive gamemodes, and an awesome community
@@ -154,7 +154,7 @@ const Index = () => {
               <div className={`transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/guide" className="btn-primary w-full sm:w-auto clean-text font-bold">
-                    <span className="text-white shadow-glow-white">Get Started</span>
+                    <span className="text-white">Get Started</span>
                   </Link>
                   <Link to="/ranks" className="btn-secondary w-full sm:w-auto clean-text font-bold">
                     View Ranks
@@ -166,7 +166,7 @@ const Index = () => {
         </section>
         
         {/* Features Section */}
-        <section className="py-16 px-4 bg-gradient-to-b from-black/90 to-black text-white">
+        <section className="py-16 px-4 bg-gradient-to-b from-black to-black/90">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="arcade-text text-3xl md:text-4xl mb-4">GAME MODES</h2>
@@ -207,7 +207,7 @@ const Index = () => {
         <section ref={statsRef} className="py-16 px-4 bg-gradient-to-b from-black to-black/95">
           <div className="container mx-auto">
             <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-white mb-4 shadow-glow-white animate-pulse-glow">SERVER STATS</h2>
+              <h2 className="arcade-text text-3xl text-white mb-4">SERVER STATS</h2>
               <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Join our growing community of tropical warriors
               </p>
@@ -217,45 +217,45 @@ const Index = () => {
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '0ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">1000+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text">1000+</span>
                 <span className="text-blue-300 clean-text">Active Players</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '150ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">50+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text">50+</span>
                 <span className="text-blue-300 clean-text">Custom Maps</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '300ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">24/7</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text">24/7</span>
                 <span className="text-blue-300 clean-text">Server Uptime</span>
               </div>
               
               <div className={`bg-black/80 rounded-xl p-6 shadow-md text-center transition-all duration-500 border border-white/10 ${isStatsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
               transitionDelay: '450ms'
             }}>
-                <span className="block text-4xl font-bold text-white mb-2 arcade-text shadow-glow-white">10+</span>
+                <span className="block text-4xl font-bold text-white mb-2 arcade-text">10+</span>
                 <span className="text-blue-300 clean-text">Events Monthly</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Meet the Team Section - Updated with rounded corners for bottom as well */}
-        <section className="py-16 px-4 bg-[#E8E0CC] rounded-t-3xl rounded-b-3xl relative">
+        {/* Meet the Team Section - Updated to black background and more compact */}
+        <section className="py-12 px-4 bg-black relative">
           <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="arcade-text text-3xl text-black mb-4">MEET THE TEAM</h2>
-              <p className="text-gray-700 max-w-2xl mx-auto clean-text">
+            <div className="text-center mb-8">
+              <h2 className="arcade-text text-3xl text-turtle-blue mb-4">MEET THE TEAM</h2>
+              <p className="text-blue-300 max-w-2xl mx-auto clean-text">
                 Learn about the people who make Turtled amazing!
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {teamMembers.map((member, index) => (
                 <TeamMember
                   key={index}
@@ -271,7 +271,7 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Let's Be Social Section - Removed Discord button as requested */}
+        {/* Let's Be Social Section */}
         <section className="py-16 px-4 bg-black relative rounded-t-3xl mt-12">
           <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent"></div>
           <div className="container mx-auto max-w-6xl relative z-10">
@@ -310,10 +310,10 @@ const Index = () => {
           </div>
         </section>
         
-        {/* CTA Section - Changed heading to white */}
+        {/* CTA Section */}
         <section className="py-16 px-4 bg-black">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="arcade-text text-3xl text-white mb-6 shadow-glow-white">READY TO DIVE IN?</h2>
+            <h2 className="arcade-text text-3xl text-white mb-6">READY TO DIVE IN?</h2>
             <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text">
               Join the Turtled Server today and experience the most exciting Minecraft PVP gameplay with tropical vibes!
             </p>

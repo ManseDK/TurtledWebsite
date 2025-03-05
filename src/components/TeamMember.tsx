@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 
 interface TeamMemberProps {
   name: string;
@@ -21,12 +21,12 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   return (
     <div className="h-full">
       <div 
-        className="bg-black/90 rounded-xl p-6 shadow-md h-full transition-all duration-300 hover:scale-105 border-0"
+        className="bg-black/80 rounded-xl p-4 shadow-md h-full transition-all duration-300 hover:scale-105 border border-white/10"
       >
         <div className="flex flex-col h-full">
           {/* Header with avatar and name */}
-          <div className="flex items-center mb-4">
-            <div className="w-16 h-16 relative overflow-hidden rounded-md mr-4">
+          <div className="flex items-center mb-3">
+            <div className="w-12 h-12 relative overflow-hidden rounded-md mr-3">
               <img 
                 src={image} 
                 alt={`${name} character`} 
@@ -34,7 +34,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               />
             </div>
             <div>
-              <h3 className="arcade-text text-lg mb-1 text-turtle-blue">{name}</h3>
+              <h3 className="arcade-text text-base mb-1 text-turtle-blue">{name}</h3>
               <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
                 {role}
               </div>
@@ -42,7 +42,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
           </div>
           
           {/* Description - always visible with a smooth transition */}
-          <div className="clean-text text-sm text-turtle-sand overflow-y-auto pr-1 custom-scrollbar max-h-40 transition-all duration-300 ease-in-out">
+          <div className="clean-text text-xs text-turtle-sand overflow-y-auto pr-1 custom-scrollbar max-h-32 transition-all duration-300 ease-in-out">
             {description}
           </div>
         </div>

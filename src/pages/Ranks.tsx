@@ -2,7 +2,7 @@ import RankCard from '@/components/RankCard';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import PageHeader from '@/components/PageHeader';
-import { CheckCircle, HelpCircle, MessageSquare, Instagram, Twitter, Youtube } from 'lucide-react';
+import { CheckCircle, HelpCircle } from 'lucide-react';
 import Bubbles from '@/components/Bubbles';
 import { useEffect } from 'react';
 
@@ -62,29 +62,6 @@ const Ranks = () => {
     }
   ];
   
-  const socialLinks = [
-    {
-      name: "Discord",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "bg-[#5865F2]"
-    },
-    {
-      name: "Instagram",
-      icon: <Instagram className="w-8 h-8" />,
-      color: "bg-[#E1306C]"
-    },
-    {
-      name: "YouTube",
-      icon: <Youtube className="w-8 h-8" />,
-      color: "bg-[#FF0000]"
-    },
-    {
-      name: "Twitter",
-      icon: <Twitter className="w-8 h-8" />,
-      color: "bg-[#1DA1F2]"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white page-transition">
       <Bubbles count={25} />
@@ -125,7 +102,7 @@ const Ranks = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/80 pointer-events-none"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
-            <h2 className="arcade-text text-3xl mb-4 text-turtle-blue">RANK BENEFITS</h2>
+            <h2 className="arcade-text text-3xl text-turtle-blue mb-4">RANK BENEFITS</h2>
             <p className="text-blue-300 max-w-2xl mx-auto clean-text">
               Enhance your server experience with these exclusive features
             </p>
@@ -166,7 +143,7 @@ const Ranks = () => {
       </section>
       
       {/* FAQ Section */}
-      <section className="py-12 px-4 bg-black bg-opacity-90 relative">
+      <section className="py-16 px-4 bg-black bg-opacity-90 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/80 pointer-events-none"></div>
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="text-center mb-12">
@@ -230,56 +207,10 @@ const Ranks = () => {
         </div>
       </section>
       
-      {/* Let's Be Social Section */}
-      <section className="py-16 px-4 bg-black relative rounded-t-3xl mt-12">
-        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent"></div>
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="md:w-1/2">
-              <img 
-                src="/lovable-uploads/d16d93fc-5c37-43d1-abc3-505c6ec3e471.png" 
-                alt="Discord mascot" 
-                className="w-full max-w-md turtle-pixel mx-auto" 
-              />
-            </div>
-            <div className="md:w-1/2 text-left">
-              <h2 className="arcade-text text-3xl text-white mb-4">Let's Be Social!</h2>
-              <p className="text-blue-300 clean-text mb-6">
-                Here on Turtled we think communication is the key to an amazing community. Because of that, we heavily value our Discord and the way it allows us to connect with our favourite people ever - you! Come join us, and let's create our server - together!
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {socialLinks.map((link, index) => (
-                  <a 
-                    key={index}
-                    href="#" 
-                    className={`${link.color} hover:opacity-90 p-4 rounded-lg flex items-center justify-center transition-transform hover:scale-105`}
-                  >
-                    <div className="flex flex-col items-center">
-                      {link.icon}
-                      <span className="mt-2 font-bold clean-text text-white">{link.name}</span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-              
-              <a 
-                href="https://discord.gg/turtled" 
-                target="_blank"
-                rel="noopener noreferrer" 
-                className="inline-block bg-[#5865F2] hover:bg-[#4752c4] text-white py-3 px-10 rounded-lg font-bold transition-all duration-300 clean-text"
-              >
-                JOIN OUR DISCORD
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* CTA Section */}
+      {/* CTA Section - Changed heading to white */}
       <section className="py-16 px-4 bg-black">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="arcade-text text-3xl text-[#D6FF42] mb-6 shadow-glow-lime">READY TO RANK UP?</h2>
+          <h2 className="arcade-text text-3xl text-white mb-6">READY TO RANK UP?</h2>
           <p className="text-lg text-blue-300 mb-8 max-w-2xl mx-auto clean-text font-medium">
             Join the elite turtle warriors and enjoy exclusive perks on the server!
           </p>
