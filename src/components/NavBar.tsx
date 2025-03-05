@@ -93,7 +93,7 @@ const NavBar = () => {
           </a>
           
           <div className="bg-[#F5A524] text-black clean-text font-bold px-4 py-2 rounded-md flex items-center shadow-glow">
-            PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
+            EU.TURTLED.NET <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
           </div>
         </div>
         
@@ -155,7 +155,7 @@ const NavBar = () => {
               </a>
               
               <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md clean-text font-bold text-center shadow-glow">
-                PLAY.TURTLED.COM <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
+                EU.TURTLED.NET <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
               </div>
             </div>
           </div>
