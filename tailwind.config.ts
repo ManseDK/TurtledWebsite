@@ -59,9 +59,10 @@ export default {
         },
         // Custom colors for turtle server theme
         turtle: {
-          lime: '#c5ff00',    // Yellowish lime (primary)
-          green: '#008060',   // Tropical green
-          sand: '#e6d2a8',    // Sand/beige
+          blue: '#73b9ee',   // New primary color (replacing lime)
+          navy: '#2a5d8c',   // New secondary color (replacing green)
+          sand: '#e6d2a8',    // Sand/beige (keeping this)
+          gold: '#FFC107'     // Gold color for headings
         }
       },
       borderRadius: {
@@ -96,8 +97,8 @@ export default {
           '100%': { opacity: '1' }
         },
         'pulse-glow': {
-          '0%, 100%': { filter: 'drop-shadow(0 0 4px rgba(197, 255, 0, 0.5))' },
-          '50%': { filter: 'drop-shadow(0 0 10px rgba(197, 255, 0, 0.8))' }
+          '0%, 100%': { filter: 'drop-shadow(0 0 4px rgba(115, 185, 238, 0.5))' },
+          '50%': { filter: 'drop-shadow(0 0 10px rgba(115, 185, 238, 0.8))' }
         }
       },
       animation: {

@@ -16,7 +16,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
   description, 
   image, 
   avatarImage,
-  color = "bg-turtle-lime" 
+  color = "bg-turtle-blue" 
 }) => {
   const [isActive, setIsActive] = useState(false);
   
@@ -39,7 +39,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               </div>
             </div>
             <div>
-              <h3 className="arcade-text text-lg mb-1 text-turtle-lime">{name}</h3>
+              <h3 className="arcade-text text-lg mb-1 text-turtle-blue">{name}</h3>
               <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
                 {role}
               </div>
@@ -56,7 +56,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({
               className="turtle-pixel w-full h-full object-contain"
             />
           </div>
-          <h3 className="arcade-text text-base text-turtle-lime mb-1">{name}</h3>
+          <h3 className="arcade-text text-base text-turtle-blue mb-1">{name}</h3>
           <div className={`text-xs inline-block px-2 py-1 rounded-full text-black ${color} clean-text font-semibold`}>
             {role}
           </div>
