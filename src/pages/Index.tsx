@@ -7,93 +7,76 @@ import Footer from '@/components/Footer';
 import VideoBackground from '@/components/VideoBackground';
 import TeamMember from '@/components/TeamMember';
 import Bubbles from '@/components/Bubbles';
-
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const statsRef = useRef<HTMLDivElement>(null);
   const [isStatsVisible, setIsStatsVisible] = useState(false);
   const [copied, setCopied] = useState(false);
-  
-  const teamMembers = [
-    {
-      name: "Manse",
-      role: "SERVER OWNER",
-      description: "I founded Turtled back in 2020 with the vision of creating the best PVP experience in Minecraft. I manage the server infrastructure and development team to ensure everything runs smoothly!",
-      image: "/lovable-uploads/c3e2c66e-9fcc-4433-8e86-63e1d1a45d2e.png",
-      avatarImage: "/lovable-uploads/c3e2c66e-9fcc-4433-8e86-63e1d1a45d2e.png",
-      color: "bg-purple-600"
-    },
-    {
-      name: "Manere",
-      role: "SERVER OWNER",
-      description: "I've been with Turtled since the beginning, helping to shape our server into what it is today. I focus on strategic decisions and ensuring our community thrives with new and exciting content!",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
-      color: "bg-purple-600"
-    },
-    {
-      name: "Auto",
-      role: "SERVER OWNER",
-      description: "I help oversee the technical aspects of Turtled, making sure our infrastructure is solid and reliable. I work closely with our development team to implement new features and improvements.",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/1a88a472-f859-4237-bdac-00adc5406218.png",
-      color: "bg-purple-600"
-    },
-    {
-      name: "Daniel",
-      role: "DEVELOPER",
-      description: "I develop custom plugins and features for Turtled. With extensive experience in Minecraft server development, I create unique gameplay mechanics that make our server stand out from the rest.",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
-      color: "bg-blue-600"
-    },
-    {
-      name: "Mini",
-      role: "BUILDER",
-      description: "I create the beautiful maps and structures you see on Turtled. My focus is on designing immersive environments that enhance gameplay while maintaining our distinctive tropical aesthetic.",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
-      color: "bg-green-600"
-    },
-    {
-      name: "Myron",
-      role: "BUILDER/MANAGER",
-      description: "I split my time between creating stunning builds and helping manage our team of builders. I ensure our server's visual style remains consistent while coordinating projects across the server.",
-      image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
-      avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
-      color: "bg-yellow-500"
-    }
-  ];
-
-  const socialLinks = [
-    {
-      name: "Discord",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "bg-[#5865F2]"
-    },
-    {
-      name: "Instagram",
-      icon: <Instagram className="w-8 h-8" />,
-      color: "bg-[#E1306C]"
-    },
-    {
-      name: "YouTube",
-      icon: <Youtube className="w-8 h-8" />,
-      color: "bg-[#FF0000]"
-    },
-    {
-      name: "Twitter",
-      icon: <Twitter className="w-8 h-8" />,
-      color: "bg-[#1DA1F2]"
-    }
-  ];
-
+  const teamMembers = [{
+    name: "Manse",
+    role: "SERVER OWNER",
+    description: "I founded Turtled back in 2020 with the vision of creating the best PVP experience in Minecraft. I manage the server infrastructure and development team to ensure everything runs smoothly!",
+    image: "/lovable-uploads/c3e2c66e-9fcc-4433-8e86-63e1d1a45d2e.png",
+    avatarImage: "/lovable-uploads/c3e2c66e-9fcc-4433-8e86-63e1d1a45d2e.png",
+    color: "bg-purple-600"
+  }, {
+    name: "Manere",
+    role: "SERVER OWNER",
+    description: "I've been with Turtled since the beginning, helping to shape our server into what it is today. I focus on strategic decisions and ensuring our community thrives with new and exciting content!",
+    image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+    avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
+    color: "bg-purple-600"
+  }, {
+    name: "Auto",
+    role: "SERVER OWNER",
+    description: "I help oversee the technical aspects of Turtled, making sure our infrastructure is solid and reliable. I work closely with our development team to implement new features and improvements.",
+    image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+    avatarImage: "/lovable-uploads/1a88a472-f859-4237-bdac-00adc5406218.png",
+    color: "bg-purple-600"
+  }, {
+    name: "Daniel",
+    role: "DEVELOPER",
+    description: "I develop custom plugins and features for Turtled. With extensive experience in Minecraft server development, I create unique gameplay mechanics that make our server stand out from the rest.",
+    image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+    avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
+    color: "bg-blue-600"
+  }, {
+    name: "Mini",
+    role: "BUILDER",
+    description: "I create the beautiful maps and structures you see on Turtled. My focus is on designing immersive environments that enhance gameplay while maintaining our distinctive tropical aesthetic.",
+    image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+    avatarImage: "/lovable-uploads/0cf3a893-5179-4515-9e9b-f76846a0672d.png",
+    color: "bg-green-600"
+  }, {
+    name: "Myron",
+    role: "BUILDER/MANAGER",
+    description: "I split my time between creating stunning builds and helping manage our team of builders. I ensure our server's visual style remains consistent while coordinating projects across the server.",
+    image: "/lovable-uploads/9b3f16eb-c248-4c9b-b031-4a95f443a9ea.png",
+    avatarImage: "/lovable-uploads/dadb5e36-7bbe-4e4e-9616-2cd2a3785348.png",
+    color: "bg-yellow-500"
+  }];
+  const socialLinks = [{
+    name: "Discord",
+    icon: <MessageSquare className="w-8 h-8" />,
+    color: "bg-[#5865F2]"
+  }, {
+    name: "Instagram",
+    icon: <Instagram className="w-8 h-8" />,
+    color: "bg-[#E1306C]"
+  }, {
+    name: "YouTube",
+    icon: <Youtube className="w-8 h-8" />,
+    color: "bg-[#FF0000]"
+  }, {
+    name: "Twitter",
+    icon: <Twitter className="w-8 h-8" />,
+    color: "bg-[#1DA1F2]"
+  }];
   useEffect(() => {
     // Trigger animation after component mounts
     setTimeout(() => {
       setIsLoaded(true);
     }, 100);
-    
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         setIsStatsVisible(true);
@@ -101,25 +84,21 @@ const Index = () => {
     }, {
       threshold: 0.3
     });
-    
     if (statsRef.current) {
       observer.observe(statsRef.current);
     }
-    
     return () => {
       if (statsRef.current) {
         observer.unobserve(statsRef.current);
       }
     };
   }, []);
-
   const handleCopyIP = () => {
     navigator.clipboard.writeText('eu.turtled.net').then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
   };
-
   return <div className="min-h-screen relative overflow-hidden page-transition">
       {/* Video Background */}
       <VideoBackground videoId="RnnctM5Rf9I" />
@@ -201,7 +180,7 @@ const Index = () => {
       </div>
     </div>
   </div>
-</section>
+      </section>
         
         {/* Stats Section */}
         <section ref={statsRef} className="py-16 px-4 bg-gradient-to-b from-black to-black/95">
@@ -256,17 +235,7 @@ const Index = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {teamMembers.map((member, index) => (
-                <TeamMember
-                  key={index}
-                  name={member.name}
-                  role={member.role}
-                  description={member.description}
-                  image={member.image}
-                  avatarImage={member.avatarImage}
-                  color={member.color}
-                />
-              ))}
+              {teamMembers.map((member, index) => <TeamMember key={index} name={member.name} role={member.role} description={member.description} image={member.image} avatarImage={member.avatarImage} color={member.color} />)}
             </div>
           </div>
         </section>
@@ -277,11 +246,7 @@ const Index = () => {
           <div className="container mx-auto max-w-6xl relative z-10">
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               <div className="md:w-1/2">
-                <img 
-                  src="/lovable-uploads/a69db618-c5fe-45d4-95ee-495f7e6a533c.png" 
-                  alt="Discord logo" 
-                  className="w-full max-w-md mx-auto rounded-2xl" 
-                />
+                <img alt="Discord logo" className="w-full max-w-md mx-auto rounded-2xl" src="https://cdn.discordapp.com/attachments/1290024968922595368/1346880588061081600/orbit-discord.png?ex=67ca748c&is=67c9230c&hm=a451a6349fb7611c65e0c236ba65f933bde331e611a6d2fd7f6bc4ebcf445fa1&" />
               </div>
               <div className="md:w-1/2 text-left">
                 <h2 className="arcade-text text-3xl text-white mb-4">Let's Be Social!</h2>
@@ -290,18 +255,12 @@ const Index = () => {
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  {socialLinks.map((link, index) => (
-                    <a 
-                      key={index}
-                      href="#" 
-                      className={`${link.color} hover:opacity-90 p-4 rounded-lg flex items-center justify-center transition-transform hover:scale-105`}
-                    >
+                  {socialLinks.map((link, index) => <a key={index} href="#" className={`${link.color} hover:opacity-90 p-4 rounded-lg flex items-center justify-center transition-transform hover:scale-105`}>
                       <div className="flex flex-col items-center">
                         {link.icon}
                         <span className="mt-2 font-bold clean-text text-white">{link.name}</span>
                       </div>
-                    </a>
-                  ))}
+                    </a>)}
                 </div>
               </div>
             </div>
