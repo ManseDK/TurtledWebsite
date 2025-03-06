@@ -1,5 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 interface RankCardProps {
   title: string;
@@ -7,16 +8,36 @@ interface RankCardProps {
   price: string;
   features: string[];
   isPremium?: boolean;
-  tebexId?: string; // New prop for Tebex checkout ID
+  tebexId?: string; // Tebex checkout ID
 }
 
 const RankCard = ({ title, icon, price, features, isPremium = false, tebexId = '' }: RankCardProps) => {
+  const { toast } = useToast();
+  
   // Function to open Tebex checkout
   const openTebexCheckout = () => {
+    // Get username from localStorage
+    const username = localStorage.getItem('minecraft-username');
+    
+    if (!username) {
+      toast({
+        title: "Username Required",
+        description: "Please set your Minecraft username first",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     if (tebexId) {
-      window.open(`https://turtled.tebex.io/checkout/packages/${tebexId}`, '_blank');
+      // Add username as a query parameter
+      window.open(`https://turtled.tebex.io/checkout/packages/${tebexId}?ign=${username}`, '_blank');
     } else {
       console.error('No Tebex ID provided for this rank');
+      toast({
+        title: "Error",
+        description: "Could not process this purchase. Please try again later.",
+        variant: "destructive",
+      });
     }
   };
 
