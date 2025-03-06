@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
 interface UsernameInputProps {
@@ -9,18 +9,7 @@ interface UsernameInputProps {
 const UsernameInput = ({ onUsernameSet }: UsernameInputProps) => {
   const [username, setUsername] = useState('');
   const [isOpen, setIsOpen] = useState(false);
-  const [savedUsername, setSavedUsername] = useState<string | null>(null);
   const { toast } = useToast();
-
-  // Load username from localStorage when component mounts
-  useEffect(() => {
-    const storedUsername = localStorage.getItem('minecraft-username');
-    if (storedUsername) {
-      setSavedUsername(storedUsername);
-      // Also notify parent component of the username
-      onUsernameSet(storedUsername);
-    }
-  }, [onUsernameSet]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,7 +25,6 @@ const UsernameInput = ({ onUsernameSet }: UsernameInputProps) => {
     
     // Save username to localStorage
     localStorage.setItem('minecraft-username', username);
-    setSavedUsername(username);
     onUsernameSet(username);
     setIsOpen(false);
     
@@ -47,19 +35,19 @@ const UsernameInput = ({ onUsernameSet }: UsernameInputProps) => {
   };
 
   return (
-    <div className="mb-6 w-full max-w-md">
+    <div className="mb-6">
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className={`bg-black border ${savedUsername ? 'border-turtle-green-light text-turtle-green-light' : 'border-turtle-blue text-turtle-blue'} 
-                    px-4 py-2 rounded-md hover:bg-gray-900 transition-colors duration-200 clean-text w-full`}
+          className="bg-black border border-turtle-blue text-turtle-blue px-4 py-2 rounded-md 
+                    hover:bg-gray-900 transition-colors duration-200 clean-text"
         >
-          {savedUsername 
-            ? `Minecraft Username: ${savedUsername}` 
+          {localStorage.getItem('minecraft-username') 
+            ? `Username: ${localStorage.getItem('minecraft-username')}` 
             : "Set Minecraft Username"}
         </button>
       ) : (
-        <div className="bg-black border border-gray-800 p-4 rounded-md w-full">
+        <div className="bg-black border border-gray-800 p-4 rounded-md max-w-md mx-auto">
           <h3 className="text-lg text-white mb-2 arcade-text">Enter Your Username</h3>
           <p className="text-gray-400 text-sm mb-4 clean-text">
             We need your Minecraft username to deliver your purchased ranks.
