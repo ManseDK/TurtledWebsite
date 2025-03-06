@@ -61,9 +61,9 @@ export default {
         turtle: {
           blue: '#73b9ee',   // Light blue
           navy: '#2a5d8c',   // Darker blue
-          sand: '#D3E4FD',   // Light blue color for text
+          sand: '#F2FCE2',   // Light green color for text
           gold: '#FFC107',   // Gold color for headings
-          lime: '#73b9ee'    // Changed from green to blue
+          lime: '#D6FF42'    // Light green color for accent/primary
         }
       },
       borderRadius: {
@@ -98,8 +98,8 @@ export default {
           '100%': { opacity: '1' }
         },
         'pulse-glow': {
-          '0%, 100%': { filter: 'drop-shadow(0 0 4px rgba(115, 185, 238, 0.5))' },
-          '50%': { filter: 'drop-shadow(0 0 10px rgba(115, 185, 238, 0.8))' }
+          '0%, 100%': { filter: 'drop-shadow(0 0 4px rgba(214, 255, 66, 0.5))' },
+          '50%': { filter: 'drop-shadow(0 0 10px rgba(214, 255, 66, 0.8))' }
         }
       },
       animation: {

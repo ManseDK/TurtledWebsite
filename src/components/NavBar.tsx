@@ -39,9 +39,9 @@ const NavBar = () => {
         {/* Logo and title */}
         <Link to="/" className="flex items-center space-x-2 group relative">
           <div className="relative w-8 h-8 flex items-center justify-center overflow-visible">
-            <Turtle className="text-turtle-blue w-8 h-8 absolute" />
+            <Turtle className="text-turtle-lime w-8 h-8 absolute" />
           </div>
-          <span className="arcade-text text-lg text-turtle-blue animate-pulse-glow">TURTLED</span>
+          <span className="arcade-text text-lg text-turtle-lime animate-pulse-glow">TURTLED</span>
         </Link>
         
         {/* Navigation Links - Center Aligned */}
@@ -50,8 +50,8 @@ const NavBar = () => {
             to="/" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/') 
-                ? 'bg-[#3b82f6] text-white shadow-glow' 
-                : 'text-white hover:bg-[#3b82f6]/80'
+                ? 'bg-turtle-lime text-black shadow-glow-lime' 
+                : 'text-turtle-sand hover:bg-turtle-lime/80 hover:text-black'
             }`}
           >
             HOME
@@ -61,8 +61,8 @@ const NavBar = () => {
             to="/guide" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/guide') 
-                ? 'bg-[#3b82f6] text-white shadow-glow-white' 
-                : 'text-white hover:bg-[#3b82f6]/80'
+                ? 'bg-turtle-lime text-black shadow-glow-lime' 
+                : 'text-turtle-sand hover:bg-turtle-lime/80 hover:text-black'
             }`}
           >
             GUIDE
@@ -72,8 +72,8 @@ const NavBar = () => {
             to="/ranks" 
             className={`rounded-md px-6 py-2 clean-text font-bold transition-colors ${
               isActive('/ranks') 
-                ? 'bg-[#3b82f6] text-white shadow-glow-white' 
-                : 'text-white hover:bg-[#3b82f6]/80'
+                ? 'bg-turtle-lime text-black shadow-glow-lime' 
+                : 'text-turtle-sand hover:bg-turtle-lime/80 hover:text-black'
             }`}
           >
             RANKS
@@ -92,15 +92,15 @@ const NavBar = () => {
             <MessageSquare className="w-6 h-6" />
           </a>
           
-          <div className="bg-[#F5A524] text-black clean-text font-bold px-4 py-2 rounded-md flex items-center shadow-glow">
-            EU.TURTLED.NET <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
+          <div className="bg-turtle-lime text-black clean-text font-bold px-4 py-2 rounded-md flex items-center shadow-glow-lime">
+            EU.TURTLED.NET
           </div>
         </div>
         
         {/* Mobile menu toggle */}
         <button 
           onClick={toggleMenu} 
-          className="md:hidden text-white hover:text-turtle-blue transition-colors"
+          className="md:hidden text-turtle-sand hover:text-turtle-lime transition-colors"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
@@ -118,7 +118,7 @@ const NavBar = () => {
             <Link 
               to="/" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/') ? 'bg-[#3b82f6] text-white shadow-glow' : 'text-white'
+                isActive('/') ? 'bg-turtle-lime text-black shadow-glow-lime' : 'text-turtle-sand'
               }`}
             >
               HOME
@@ -127,7 +127,7 @@ const NavBar = () => {
             <Link 
               to="/guide" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/guide') ? 'bg-[#3b82f6] text-white shadow-glow-white' : 'text-white'
+                isActive('/guide') ? 'bg-turtle-lime text-black shadow-glow-lime' : 'text-turtle-sand'
               }`}
             >
               GUIDE
@@ -136,7 +136,7 @@ const NavBar = () => {
             <Link 
               to="/ranks" 
               className={`px-4 py-2 clean-text font-bold rounded-md ${
-                isActive('/ranks') ? 'bg-[#3b82f6] text-white shadow-glow-white' : 'text-white'
+                isActive('/ranks') ? 'bg-turtle-lime text-black shadow-glow-lime' : 'text-turtle-sand'
               }`}
             >
               RANKS
@@ -154,8 +154,8 @@ const NavBar = () => {
                 </span>
               </a>
               
-              <div className="bg-[#F5A524] text-black px-4 py-2 rounded-md clean-text font-bold text-center shadow-glow">
-                EU.TURTLED.NET <span className="ml-2 bg-white/20 px-2 py-0.5 rounded text-sm">106</span>
+              <div className="bg-turtle-lime text-black px-4 py-2 rounded-md clean-text font-bold text-center shadow-glow-lime">
+                EU.TURTLED.NET
               </div>
             </div>
           </div>

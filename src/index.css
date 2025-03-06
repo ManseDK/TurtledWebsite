@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@300;400;500;600;700&display=swap');
 @font-face {
   font-family: 'Minecraftia';
@@ -76,9 +77,9 @@
 
   .pixel-border {
     box-shadow: 
-      4px 0 0 0 theme('colors.turtle.blue'),
-      0 4px 0 0 theme('colors.turtle.blue'),
-      4px 4px 0 0 theme('colors.turtle.blue');
+      4px 0 0 0 theme('colors.turtle.lime'),
+      0 4px 0 0 theme('colors.turtle.lime'),
+      4px 4px 0 0 theme('colors.turtle.lime');
   }
 
   .glass {
@@ -118,9 +119,9 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-turtle-blue text-black font-bold py-3 px-6 rounded-lg
+    @apply bg-turtle-lime text-black font-bold py-3 px-6 rounded-lg
     transition-all duration-300 hover:brightness-110 hover:scale-105
-    active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-blue/50;
+    active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-lime/50;
   }
   
   .btn-secondary {
@@ -130,11 +131,11 @@
   }
   
   .nav-link {
-    @apply relative text-white font-bold py-2 px-4 transition-colors clean-text;
+    @apply relative text-turtle-sand font-bold py-2 px-4 transition-colors clean-text;
   }
   
   .nav-link:after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-1 bg-turtle-blue 
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-1 bg-turtle-lime 
     transition-all duration-300 ease-in-out;
   }
   
