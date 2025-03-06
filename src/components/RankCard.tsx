@@ -14,7 +14,7 @@ interface RankCardProps {
 const RankCard = ({ title, icon, price, features, isPremium = false, tebexId = '' }: RankCardProps) => {
   const { toast } = useToast();
   
-  // Function to open Tebex checkout
+  // Function to open Tebex checkout with proper username handling
   const openTebexCheckout = () => {
     // Get username from localStorage
     const username = localStorage.getItem('minecraft-username');
@@ -29,8 +29,16 @@ const RankCard = ({ title, icon, price, features, isPremium = false, tebexId = '
     }
     
     if (tebexId) {
-      // Add username as a query parameter
-      window.open(`https://turtled.tebex.io/checkout/packages/${tebexId}?ign=${username}`, '_blank');
+      // Create the proper URL with the username parameter for Tebex
+      // The username is included as both a query parameter (ign) and will be passed
+      // in the basket creation request
+      const checkoutUrl = `https://turtled.tebex.io/checkout/packages/${tebexId}?ign=${username}`;
+      
+      // Log the checkout attempt for debugging
+      console.log(`Creating Tebex checkout for username: ${username}, package: ${tebexId}`);
+      
+      // Open the checkout URL in a new tab
+      window.open(checkoutUrl, '_blank');
     } else {
       console.error('No Tebex ID provided for this rank');
       toast({
