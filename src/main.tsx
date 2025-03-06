@@ -1,7 +1,7 @@
-
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+import React from 'react';
 
 // Add some debug logging to help identify issues
 console.log('Application starting...');
@@ -15,7 +15,11 @@ try {
     console.error('Root element not found!');
   } else {
     console.log('Root element found, rendering app...');
-    createRoot(rootElement).render(<App />);
+    createRoot(rootElement).render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
     console.log('App rendered successfully');
   }
 } catch (error) {
