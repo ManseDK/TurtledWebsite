@@ -89,6 +89,7 @@ const Ranks = () => {
               price="$4.99"
               features={bubbleFeatures}
               isPremium={false}
+              tebexId="9156455" // Example Tebex ID - replace with actual ID
             />
             
             <RankCard
@@ -97,6 +98,7 @@ const Ranks = () => {
               price="$9.99"
               features={turtleFeatures}
               isPremium={true}
+              tebexId="9156456" // Example Tebex ID - replace with actual ID
             />
           </div>
         </div>
@@ -218,9 +220,9 @@ const Ranks = () => {
           </p>
           <button 
             onClick={scrollToTop}
-            className="bg-turtle-blue text-black clean-text font-bold py-3 px-6 rounded-lg
+            className="bg-turtle-green-light text-black clean-text font-bold py-3 px-6 rounded-lg
               transition-all duration-300 hover:brightness-110 hover:scale-105
-              active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-blue/50">
+              active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-green-light/50">
             Purchase Rank Now
           </button>
         </div>

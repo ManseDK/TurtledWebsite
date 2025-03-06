@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@300;400;500;600;700&display=swap');
 @font-face {
   font-family: 'Minecraftia';
@@ -77,9 +76,9 @@
 
   .pixel-border {
     box-shadow: 
-      4px 0 0 0 theme('colors.turtle.lime'),
-      0 4px 0 0 theme('colors.turtle.lime'),
-      4px 4px 0 0 theme('colors.turtle.lime');
+      4px 0 0 0 theme('colors.turtle.green.DEFAULT'),
+      0 4px 0 0 theme('colors.turtle.green.DEFAULT'),
+      4px 4px 0 0 theme('colors.turtle.green.DEFAULT');
   }
 
   .glass {
@@ -95,7 +94,7 @@
   }
   
   .shadow-glow-lime {
-    text-shadow: 0 0 10px rgba(214, 255, 66, 0.7);
+    text-shadow: 0 0 10px rgba(146, 211, 110, 0.7);
   }
   
   .shadow-glow-white {
@@ -119,9 +118,9 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-turtle-lime text-black font-bold py-3 px-6 rounded-lg
+    @apply bg-turtle-green-light text-black font-bold py-3 px-6 rounded-lg
     transition-all duration-300 hover:brightness-110 hover:scale-105
-    active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-lime/50;
+    active:scale-95 focus:outline-none focus:ring-2 focus:ring-turtle-green-light/50;
   }
   
   .btn-secondary {
@@ -135,7 +134,7 @@
   }
   
   .nav-link:after {
-    @apply content-[''] absolute bottom-0 left-0 w-0 h-1 bg-turtle-lime 
+    @apply content-[''] absolute bottom-0 left-0 w-0 h-1 bg-turtle-green-DEFAULT 
     transition-all duration-300 ease-in-out;
   }
   
@@ -161,7 +160,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Bubble animation */
 .bubble {
   position: absolute;
   bottom: -50px;

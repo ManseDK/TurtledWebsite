@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -59,11 +58,16 @@ export default {
         },
         // Custom colors for turtle server theme
         turtle: {
-          blue: '#73b9ee',   // Light blue
+          blue: '#73b9ee',   // Light blue (keeping bubbles color)
           navy: '#2a5d8c',   // Darker blue
           sand: '#F2FCE2',   // Light green color for text
           gold: '#FFC107',   // Gold color for headings
-          lime: '#D6FF42'    // Light green color for accent/primary
+          lime: '#92D36E',   // More natural green color (changed from #D6FF42)
+          green: {
+            light: '#92D36E', // Light green
+            DEFAULT: '#4CAF50', // Medium green
+            dark: '#2E7D32'   // Dark green
+          }
         }
       },
       borderRadius: {
